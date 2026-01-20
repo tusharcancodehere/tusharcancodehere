@@ -1,7 +1,7 @@
 <div align="center">
 
   # Hi, I'm Tushar! 👋
-  ### 16yo Dev | 🤖 AI & Robotics Enthusiast | 🚁 Drone Pilot
+  ### 16yo Dev | 🤖 AI & Robotics Enthusiast | Tech Addict 💻
 
   <p align="center">
     <a href="https://www.linkedin.com/in/tusharverma-/">
