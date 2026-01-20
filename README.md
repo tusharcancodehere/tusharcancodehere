@@ -21,8 +21,8 @@
 
 - 🔭 **Current Project:** Building **Jarvis** (An AI Assistant using OpenCV + OpenAI)
 - 🌱 **Learning:** Advanced Computer Vision & Hardware Integration
-- ⚡ **Fun Fact:** I build physical drones from scratch—I don't just simulate them!
-- 💻 **Main Stack:** Python, OpenCV, Linux, OpenAI API
+- ⚡ **Fun Fact:** I dont believe in learning. I believe in learning and implementing that learning.
+- 💻 **Main Stack:** Python, OpenCV, Linux, Robotics
 
 <div align="center">
   <h3>🛠️ Tech Stack</h3>
