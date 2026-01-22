@@ -12,7 +12,7 @@ Hi, I'm Tushar! 👋<br>16yo Dev | 🤖 AI & Robotics Enthusiast | Tech Addict �
 ![](https://nirzak-streak-stats.vercel.app/?user=tusharcancodehere&theme=dark&hide_border=true)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact)
 
-### ✍️ Random Dev Quote
+### ✍️ Random Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
