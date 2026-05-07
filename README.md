@@ -5,14 +5,12 @@ Hi, I'm Tushar! 👋
 ## 🚀 About Me
 I don't just write code; I build solutions. Currently bridging the gap between software and hardware. Whether it's building full-stack apps or tinkering with computer vision, I love creating high-ROI software and making things move. Based in Delhi, India.
 
-* **🔭 Current Projects:** Building **Jarvis & Adam** (AI Assistants using OpenCV + OpenAI), developing **AirDraw** (a hand-recognition system to control desktop mouse functions), and working on **Project T** (deployment automation using Electron & PowerShell).
 * **🌱 Learning:** Advanced Computer Vision, React, and Hardware Integration.
 * **⚡ Fun Fact:** I don't just believe in learning—I believe in *building* to learn.
 * **💻 Main Stack:** Python (Scikit-Learn, Pandas), React, OpenCV, Linux, Robotics.
 
 ### 🏆 Achievements
 * **Winner**, Scaler Young Innovator Internship Challenge (YIIC)
-* **Winner**, Codebreak60 
 
 ## 🌐 Connect with Me:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/someone_was__here_) 
@@ -54,12 +52,12 @@ I don't just write code; I build solutions. Currently bridging the gap between s
 ---
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=tusharcancodehere&theme=dark&hide_border=true&include_all_commits=true&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=tusharcancodehere&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact)
+![Tushar's GitHub stats](https://github-readme-stats.vercel.app/api?username=tusharcancodehere&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+![Tushar's Streak](https://streak-stats.demolab.com/?user=tusharcancodehere&theme=tokyonight&hide_border=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 ### ✍️ Random Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
+![Random Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 ---
-[![](https://visitcount.itsvg.in/api?id=tusharcancodehere&icon=0&color=0)](https://visitcount.itsvg.in)
+[![Profile Views](https://visitcount.itsvg.in/api?id=tusharcancodehere&icon=0&color=0)](https://visitcount.itsvg.in)
