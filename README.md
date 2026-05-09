@@ -42,7 +42,6 @@ I don't just write code; I build solutions. Currently bridging the gap between s
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 
-![Electron](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
 
 ### 🎨 Creative
 ![DaVinci Resolve](https://img.shields.io/badge/DaVinci_Resolve-333333?style=for-the-badge&logo=davinci-resolve&logoColor=white) 
