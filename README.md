@@ -7,7 +7,7 @@ I don't just write code; I build solutions. Currently bridging the gap between s
 
 * **🌱 Learning:** Advanced Computer Vision, React, and Hardware Integration.
 * **⚡ Fun Fact:** I don't just believe in learning—I believe in *building* to learn.
-* **💻 Main Stack:** Python (Scikit-Learn, Pandas), React, OpenCV, Linux, Robotics.
+* **💻 Main Stack:** Python (Numpy,Pandas,fastapi,zipfile), Linux, Robotics.
 
 ### 🏆 Achievements
 * **Winner**, Scaler Young Innovator Internship Challenge (YIIC)
