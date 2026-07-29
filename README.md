@@ -2,9 +2,9 @@
 
 # Hi, I'm Tushar Verma 👋
 
-### AI • Computer Vision • Full-Stack Developer
+### AI • Computer Vision • MERN Stack • Full-Stack Developer
 
-> Building real-world software powered by AI, Computer Vision, and modern backend technologies.
+> Building real-world software powered by AI, Computer Vision, MERN Stack, and modern backend technologies.
 
 <p align="center">
 
@@ -28,7 +28,7 @@
 
 # 💫 About Me
 
-🚀 Passionate about building **AI-powered applications**, **Computer Vision systems**, and **Full-Stack software** that solve real-world problems.
+🚀 Passionate about building **AI-powered applications**, **Computer Vision systems**, **MERN Stack applications**, and **Full-Stack software** that solve real-world problems.
 
 💡 I enjoy creating practical projects that improve my engineering skills rather than simply following tutorials.
 
@@ -37,14 +37,17 @@
 - 🤖 Artificial Intelligence
 - 👁️ Computer Vision
 - 🧠 Machine Learning & Deep Learning
+- 🌐 MERN Stack (MongoDB, Express.js, React, Node.js)
+- ⚛️ React Ecosystem
 - ⚙️ Backend Development
 - 🐳 Docker & DevOps
 - 🐧 Linux
-- 🌐 Open Source
+- 🌍 Open Source
 
 ### 🎯 Current Focus
 
 - Building production-ready AI applications
+- Developing scalable MERN Stack applications
 - Learning scalable backend architecture
 - Writing clean and maintainable code
 - Contributing to Open Source
@@ -52,17 +55,25 @@
 
 ### 🚀 Goal
 
-Become a **Software Engineer** specializing in **Artificial Intelligence**, **Computer Vision**, and **Backend Systems**.
+Become a **Software Engineer** specializing in **Artificial Intelligence**, **Computer Vision**, **Full-Stack (MERN)**, and **Backend Systems**.
 
 ---
 
 # 🚀 Featured Projects
 
-### 🎥 FUN_WITH_CV
+### 🎥 CAMZ
 
 Real-time Computer Vision Dashboard with live camera streaming, analytics, performance monitoring, and AI-powered processing.
 
 **Tech:** Python • OpenCV • Flask • React
+
+---
+
+### 🌐 MERN Full-Stack Application
+
+Production-ready full-stack web application with authentication, REST APIs, MongoDB database integration, and responsive React frontend.
+
+**Tech:** MongoDB • Express.js • React • Node.js
 
 ---
 
@@ -84,32 +95,50 @@ Self-hosted Linux server running automation tools, Docker containers, and person
 
 # 💻 Tech Stack
 
-### Languages
+## Languages
 
 <p>
-<img src="https://skillicons.dev/icons?i=python,js,html,css,bash"/>
+<img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css,bash"/>
 </p>
 
-### AI & Data Science
+## Frontend
+
+<p>
+<img src="https://skillicons.dev/icons?i=react,vite,nextjs,tailwind"/>
+</p>
+
+## MERN Stack
+
+<p>
+<img src="https://skillicons.dev/icons?i=mongodb,express,nodejs,react"/>
+</p>
+
+## AI & Data Science
 
 <p>
 <img src="https://skillicons.dev/icons?i=opencv"/>
 <img src="https://go-skill-icons.vercel.app/api/icons?i=numpy,pandas"/>
 </p>
 
-### Backend
+## Backend
 
 <p>
-<img src="https://skillicons.dev/icons?i=flask,fastapi,firebase"/>
+<img src="https://skillicons.dev/icons?i=nodejs,express,flask,fastapi,firebase"/>
 </p>
 
-### DevOps & Tools
+## Database
 
 <p>
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,raspberrypi"/>
+<img src="https://skillicons.dev/icons?i=mongodb,firebase"/>
 </p>
 
-### Hardware
+## DevOps & Tools
+
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,postman,raspberrypi"/>
+</p>
+
+## Hardware
 
 <p>
 
@@ -121,62 +150,32 @@ Self-hosted Linux server running automation tools, Docker containers, and person
 
 </p>
 
----
-
 # 📊 GitHub Statistics
 
 <p align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github"/>
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true"/>
-
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere" alt="GitHub Stats"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true&langs_count=8&cache_seconds=86400" alt="Top Languages"/>
 </p>
 
 <p align="center">
-
-<img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark-blue&hide_border=true"/>
-
+  <img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark&hide_border=true" alt="GitHub Streak"/>
 </p>
-
----
 
 # 📈 Contribution Graph
 
 <p align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
-
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
 </p>
-
----
-
-# 📊 GitHub Summary
-
-<p align="center">
-
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tusharcancodehere&theme=github_dark"/>
-
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tusharcancodehere&theme=github_dark"/>
-
-</p>
-
-<p align="center">
-
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tusharcancodehere&theme=github_dark"/>
-
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tusharcancodehere&theme=github_dark"/>
-
-</p>
-
----
 
 # 🏅 Achievements
 
 - 🤖 Building AI & Computer Vision Applications
-- 🐧 Linux Enthusiast
+- 🌐 MERN Stack Developer
+- ⚛️ React Developer
 - 🚀 Open Source Contributor
 - ⚙️ Backend Developer
+- 🐳 Docker Enthusiast
+- 🐧 Linux Enthusiast
 - 🧠 Exploring Machine Learning
 - 💻 Always Learning New Technologies
 
