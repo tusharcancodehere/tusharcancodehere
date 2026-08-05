@@ -1,12 +1,12 @@
 <div align="center">
 
-# Hi, I'm Tushar Verma 👋
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=320&color=gradient&customColorList=12,20,24,30&text=Tushar%20Verma&fontColor=ffffff&fontSize=60&animation=fadeIn&fontAlignY=38&desc=AI%20Developer%20•%20Computer%20Vision%20•%20MERN%20Stack%20•%20Backend%20Engineer&descAlignY=62"/>
 
-### AI • Computer Vision • MERN Stack • Full-Stack Developer
+<br>
 
-> Building real-world software powered by AI, Computer Vision, MERN Stack, and modern backend technologies.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3500&pause=1200&color=58A6FF&center=true&vCenter=true&width=950&lines=Artificial+Intelligence;Computer+Vision;Full+Stack+Developer;Backend+Engineer;Linux+Enthusiast;Docker+%7C+Open+Source;Always+Building+Something+New"/>
 
-<p align="center">
+<br><br>
 
 <a href="https://github.com/tusharcancodehere">
 <img src="https://komarev.com/ghpvc/?username=tusharcancodehere&style=for-the-badge&color=blue"/>
@@ -20,189 +20,415 @@
 <img src="https://img.shields.io/github/stars/tusharcancodehere?affiliations=OWNER&style=for-the-badge"/>
 </a>
 
-</p>
-
 </div>
 
 ---
 
-# 💫 About Me
+# 👨‍💻 About Me
 
-🚀 Passionate about building **AI-powered applications**, **Computer Vision systems**, **MERN Stack applications**, and **Full-Stack software** that solve real-world problems.
+```python
+class TusharVerma:
 
-💡 I enjoy creating practical projects that improve my engineering skills rather than simply following tutorials.
+    def __init__(self):
 
-### 🔭 Currently Exploring
+        self.name = "Tushar Verma"
+
+        self.location = "India 🇮🇳"
+
+        self.role = [
+            "AI Developer",
+            "Computer Vision Developer",
+            "MERN Stack Developer",
+            "Backend Developer"
+        ]
+
+        self.currently_learning = [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "Distributed Systems",
+            "Cloud Computing",
+            "DevOps"
+        ]
+
+        self.interests = [
+            "Open Source",
+            "Backend Architecture",
+            "Linux",
+            "Automation",
+            "Computer Vision"
+        ]
+
+        self.goal = "Build software that solves real-world problems."
+
+    def life(self):
+        while True:
+            Build()
+            Break()
+            Learn()
+            Improve()
+```
+
+---
+
+# 🚀 Current Focus
 
 - 🤖 Artificial Intelligence
 - 👁️ Computer Vision
-- 🧠 Machine Learning & Deep Learning
-- 🌐 MERN Stack (MongoDB, Express.js, React, Node.js)
+- 🌐 MERN Stack
 - ⚛️ React Ecosystem
 - ⚙️ Backend Development
-- 🐳 Docker & DevOps
+- 🐳 Docker
 - 🐧 Linux
 - 🌍 Open Source
-
-### 🎯 Current Focus
-
-- Building production-ready AI applications
-- Developing scalable MERN Stack applications
-- Learning scalable backend architecture
-- Writing clean and maintainable code
-- Contributing to Open Source
-- Exploring intelligent automation
-
-### 🚀 Goal
-
-Become a **Software Engineer** specializing in **Artificial Intelligence**, **Computer Vision**, **Full-Stack (MERN)**, and **Backend Systems**.
+- ☁️ Cloud Technologies
 
 ---
 
 # 🚀 Featured Projects
 
-### 🎥 CAMZ
+## 🎥 CAMZ
 
-Real-time Computer Vision Dashboard with live camera streaming, analytics, performance monitoring, and AI-powered processing.
+> Real-time Computer Vision Dashboard with AI-powered processing.
 
-**Tech:** Python • OpenCV • Flask • React
+**Tech Stack**
 
----
-
-### 🌐 MERN Full-Stack Application
-
-Production-ready full-stack web application with authentication, REST APIs, MongoDB database integration, and responsive React frontend.
-
-**Tech:** MongoDB • Express.js • React • Node.js
+`Python` • `OpenCV` • `Flask` • `React`
 
 ---
 
-### 🤖 AI Voice Assistant
+## 🤖 AI Voice Assistant
 
-Voice-controlled assistant powered by Gemini capable of speech recognition and natural conversations.
+Voice Assistant powered by Gemini API with Speech Recognition.
 
-**Tech:** Python • Gemini API
+**Tech Stack**
+
+`Python` • `Gemini API` • `Whisper`
 
 ---
 
-### 🍓 Raspberry Pi Home Server
+## 🌐 MERN Full Stack Application
 
-Self-hosted Linux server running automation tools, Docker containers, and personal services.
+Authentication, REST APIs, Database Integration and Responsive UI.
 
-**Tech:** Raspberry Pi • Linux • Docker
+**Tech Stack**
+
+`MongoDB` • `Express` • `React` • `Node.js`
+
+---
+
+## 🍓 Raspberry Pi Home Server
+
+Personal self-hosted Linux server with Docker containers.
+
+**Tech Stack**
+
+`Docker` • `Linux` • `Raspberry Pi`
 
 ---
 
 # 💻 Tech Stack
 
-## Languages
+### Languages
 
 <p>
+
 <img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css,bash"/>
+
 </p>
 
-## Frontend
+### Frontend
 
 <p>
-<img src="https://skillicons.dev/icons?i=react,vite,nextjs,tailwind"/>
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind"/>
+
 </p>
 
-## MERN Stack
+### Backend
 
 <p>
-<img src="https://skillicons.dev/icons?i=mongodb,express,nodejs,react"/>
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,flask,fastapi"/>
+
 </p>
 
-## AI & Data Science
+### AI & Data Science
 
 <p>
+
 <img src="https://skillicons.dev/icons?i=opencv"/>
+
 <img src="https://go-skill-icons.vercel.app/api/icons?i=numpy,pandas"/>
+
 </p>
 
-## Backend
+### Database
 
 <p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,flask,fastapi,firebase"/>
-</p>
 
-## Database
-
-<p>
 <img src="https://skillicons.dev/icons?i=mongodb,firebase"/>
+
 </p>
 
-## DevOps & Tools
-
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,postman,raspberrypi"/>
-</p>
-
-## Hardware
+### DevOps
 
 <p>
 
-<img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/AMD-ED1C24?style=for-the-badge&logo=amd&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/NVIDIA-76B900?style=for-the-badge&logo=nvidia&logoColor=white"/>
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,postman"/>
 
 </p>
 
-# 📊 GitHub Statistics
+---
+
+# 📊 GitHub Analytics
 
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere" alt="GitHub Stats"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true&langs_count=8&cache_seconds=86400" alt="Top Languages"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true&langs_count=8"/>
+
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark&hide_border=true" alt="GitHub Streak"/>
+
+<img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark&hide_border=true"/>
+
 </p>
 
+---
 # 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
+
 </p>
+
+---
+
+# 🏆 GitHub Trophies
+
+<p align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=tusharcancodehere&theme=algolia&column=4&margin-w=15&margin-h=15"/>
+
+</p>
+
+---
+
+# 📊 GitHub Summary
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tusharcancodehere&theme=github_dark"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=tusharcancodehere&theme=github_dark&utcOffset=5.5" height="180"/>
+
+</p>
+
+---
+
+# 📌 Featured Repositories
+
+<p align="center">
+
+<a href="https://github.com/tusharcancodehere/CAMZ">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CAMZ&theme=github_dark&hide_border=true"/>
+
+</a>
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=AI-Voice-Assistant&theme=github_dark&hide_border=true"/>
+
+</a>
+
+</p>
+
+<p align="center">
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=MERN-FullStack&theme=github_dark&hide_border=true"/>
+
+</a>
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=RaspberryPi-HomeServer&theme=github_dark&hide_border=true"/>
+
+</a>
+
+</p>
+
+---
 
 # 🏅 Achievements
 
-- 🤖 Building AI & Computer Vision Applications
-- 🌐 MERN Stack Developer
-- ⚛️ React Developer
-- 🚀 Open Source Contributor
-- ⚙️ Backend Developer
-- 🐳 Docker Enthusiast
-- 🐧 Linux Enthusiast
-- 🧠 Exploring Machine Learning
-- 💻 Always Learning New Technologies
+- 🤖 AI Application Development
+- 👁️ Computer Vision Systems
+- 🌐 MERN Stack Development
+- ⚙️ Backend Engineering
+- 🐳 Docker & Linux
+- 🌍 Open Source Contributions
+- 🚀 Continuous Learning
+- 💻 Building Real-World Projects
 
 ---
 
+# 📚 Currently Learning
+
+```text
+████████████████████░░░░ 80%
+
+✓ Artificial Intelligence
+
+✓ Computer Vision
+
+✓ MERN Stack
+
+✓ Backend Development
+
+✓ Docker
+
+✓ Linux
+
+◉ Distributed Systems
+
+◉ DevOps
+
+◉ Cloud Computing
+```
+
+---
+
+# ⚡ Developer Mindset
+
+```text
+while(alive){
+
+    Learn();
+
+    Build();
+
+    Fail();
+
+    Improve();
+
+    Repeat();
+
+}
+```
+
+---
+
+# 💬 Random Dev Quote
+
+<p align="center">
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=github_dark"/>
+
+</p>
+
+---
 # 🌐 Connect With Me
 
-<p>
+<p align="center">
 
-<a href="https://instagram.com/someone_was__here_">
-<img src="https://skillicons.dev/icons?i=instagram"/>
-</a>
+<a href="https://github.com/tusharcancodehere" target="_blank">
+<img src="https://skillicons.dev/icons?i=github" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
-<a href="https://linkedin.com/in/tusharverma-">
-<img src="https://skillicons.dev/icons?i=linkedin"/>
-</a>
+<a href="https://linkedin.com/in/tusharverma-" target="_blank">
+<img src="https://skillicons.dev/icons?i=linkedin" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://instagram.com/someone_was__here_" target="_blank">
+<img src="https://skillicons.dev/icons?i=instagram" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a href="mailto:thetusharverma2505@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail"/>
+<img src="https://skillicons.dev/icons?i=gmail" height="55" />
 </a>
 
 </p>
 
 ---
 
-# 💭 Philosophy
+# 🎯 2026 Goals
 
-> **"Build. Break. Learn. Repeat."**
+- 🚀 Build Production Ready AI Applications
+- 🤖 Master Computer Vision
+- 🌐 Become an Advanced MERN Developer
+- ⚙️ Learn Scalable Backend Architecture
+- 🐳 Master Docker & Containers
+- ☁️ Learn Cloud Deployment
+- 🌍 Contribute More to Open Source
+- 📚 Read More Engineering Books
 
-I enjoy turning ideas into real software, experimenting with new technologies, contributing to open source, and continuously improving as a developer. Every project teaches something new.
+---
+
+# ⚙️ Tech I Enjoy Working With
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python"/>
+
+<img src="https://skillicons.dev/icons?i=react"/>
+
+<img src="https://skillicons.dev/icons?i=nodejs"/>
+
+<img src="https://skillicons.dev/icons?i=express"/>
+
+<img src="https://skillicons.dev/icons?i=mongodb"/>
+
+<img src="https://skillicons.dev/icons?i=docker"/>
+
+<img src="https://skillicons.dev/icons?i=linux"/>
+
+<img src="https://skillicons.dev/icons?i=git"/>
+
+<img src="https://skillicons.dev/icons?i=github"/>
+
+<img src="https://skillicons.dev/icons?i=vscode"/>
+
+</p>
+
+---
+
+# 💡 Philosophy
+
+> **"Build things that solve real problems."**
+
+I enjoy transforming ideas into software, learning from every project, and continuously improving my engineering skills.
+
+---
+
+<div align="center">
+
+## ⚡ Thanks for Visiting!
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&center=true&vCenter=true&width=650&lines=Thanks+for+visiting!;Happy+Coding!;See+you+again!;⭐+Don't+forget+to+star+my+repositories!"/>
+
+<br><br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=180&color=gradient&customColorList=12,20,24,30"/>
+
+</div>
