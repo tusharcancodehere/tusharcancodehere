@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250">
   <rect width="900" height="250" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="249" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
-  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">LANGUAGE &amp; TECH STACK</text>
+  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">LANGUAGE &amp; TECH TELEMETRY</text>
   <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repository-weighted technologies</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#d6a84a" letter-spacing="2" text-anchor="end" opacity="0.8">› stack.scan_</text>
   <line x1="30" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>

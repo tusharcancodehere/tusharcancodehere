@@ -1,7 +1,7 @@
 <!--
   ╔══════════════════════════════════════════════════════════════════════╗
   ║  tusharcancodehere / tusharcancodehere                              ║
-  ║  GitHub Profile README — Renaissance · GitSkins                     ║
+  ║  GitHub Profile README — Renaissance Starship · GitSkins             ║
   ║                                                                      ║
   ║  All displayed data is sourced from public GitHub API.               ║
   ║  Run  node scripts/update-profile.js  to regenerate SVG assets.    ║
@@ -58,7 +58,7 @@
 <p align="center">
   <img
     src="assets/stats.svg"
-    alt="Tushar's GitHub Statistics — Stars, Repositories, Followers, Contributions"
+    alt="Tushar's GitHub Statistics — Stars, Repositories, Followers, Combat Energy"
     width="900"
   />
 </p>
@@ -69,7 +69,7 @@
 <p align="center">
   <img
     src="assets/profile-signal.svg"
-    alt="Profile Signal — Tushar · @tusharcancodehere · live GitHub card"
+    alt="Profile Signal — Tushar · @tusharcancodehere · Renaissance Starship Console"
     width="900"
   />
 </p>
@@ -91,20 +91,24 @@
 <p align="center">
   <img
     src="assets/language-stack.svg"
-    alt="Language & Tech Stack — Python, OpenCV, Flask, OpenAI, Raspberry Pi"
+    alt="Language & Tech Telemetry — Python, OpenCV, Flask, OpenAI, Raspberry Pi"
     width="900"
   />
 </p>
 
 ---
 
-<!-- ── 7. CONTRIBUTION SIGNAL ────────────────────────────────────────── -->
+<!-- ── 7. CONTRIBUTION SIGNAL (SPACE-SHOOTER COMBAT SCENE) ──────────── -->
 <p align="center">
   <img
     src="assets/contribution-signal.svg"
-    alt="Contribution Signal — GitHub Activity Calendar"
+    alt="Contribution Combat Signal — Retro Space-Shooter Alien Invasion Battle"
     width="900"
   />
+</p>
+
+<p align="center">
+  <samp>223 contributions over the last year converted into starship combat energy.</samp>
 </p>
 
 ---
@@ -113,23 +117,23 @@
 <p align="center">
   <img
     src="assets/projects.svg"
-    alt="Featured Projects — CCTV_PI, Jarvis, CamZ"
+    alt="Project Dossiers — CCTV_PI, Jarvis, CamZ"
     width="900"
   />
 </p>
 
-<!-- Clickable repository links -->
+<!-- Clickable repository mission links -->
 <p align="center">
   <a href="https://github.com/tusharcancodehere/CCTV_PI">
-    <img src="https://img.shields.io/badge/Repository-CCTV__PI-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CCTV_PI"/>
+    <img src="https://img.shields.io/badge/Mission-CCTV__PI-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CCTV_PI"/>
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/tusharcancodehere/Jarvis">
-    <img src="https://img.shields.io/badge/Repository-Jarvis-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="Jarvis"/>
+    <img src="https://img.shields.io/badge/Mission-Jarvis-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="Jarvis"/>
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/tusharcancodehere/CamZ">
-    <img src="https://img.shields.io/badge/Repository-CamZ-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CamZ"/>
+    <img src="https://img.shields.io/badge/Mission-CamZ-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CamZ"/>
   </a>
 </p>
 
@@ -158,7 +162,7 @@
 <p align="center">
   <img
     src="assets/footer.svg"
-    alt="Renaissance interface · live public GitHub data"
+    alt="Mission Complete · live public GitHub telemetry"
     width="900"
   />
 </p>

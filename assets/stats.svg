@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
   <defs>
-    <linearGradient id="st-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.85"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.4"/></linearGradient>
+    <linearGradient id="st-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.9"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.45"/></linearGradient>
   </defs>
 
   <!-- Stars Card -->
@@ -26,7 +26,7 @@
 
   <!-- Contributions Card -->
   <rect x="684" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
-  <text x="704" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">CONTRIBUTIONS</text>
+  <text x="704" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">COMBAT ENERGY</text>
   <text x="704" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">223</text>
   <text x="704" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">past year activity</text>
   <text x="864" y="32" font-family="Georgia,serif" font-size="14" fill="#5e8f45" text-anchor="end">✦</text>

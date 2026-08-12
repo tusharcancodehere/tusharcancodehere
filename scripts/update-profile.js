@@ -9,7 +9,7 @@
  * Usage:
  *   node scripts/update-profile.js
  *
- * All SVGs use pure SVG vector elements (<rect>, <circle>, <text>, <path>, <line>)
+ * All SVGs use pure SVG vector elements (<rect>, <circle>, <path>, <polygon>, <line>, <text>)
  * for 100% reliable rendering on GitHub.
  */
 
@@ -87,7 +87,6 @@ function pickFeatured(repos) {
   return [...repos]
     .filter(r => !r.fork && r.name !== USERNAME)
     .sort((a, b) => {
-      // Prioritize repos with descriptions first
       const descA = a.description ? 500 : 0;
       const descB = b.description ? 500 : 0;
       const sa = descA + (a.stargazers_count || 0) * 5 + (a.forks_count || 0) * 2 + new Date(a.pushed_at || 0).getTime() / 1e12;
@@ -144,10 +143,10 @@ function genHeader(profile) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="140" viewBox="0 0 900 140">
   <defs>
-    <radialGradient id="g-green"   cx="78%" cy="18%" r="38%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.35"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
-    <radialGradient id="g-magenta" cx="12%" cy="82%" r="36%"><stop offset="0%" stop-color="#9b1748" stop-opacity="0.25"/><stop offset="100%" stop-color="#9b1748" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g-green"   cx="78%" cy="18%" r="38%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.38"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g-magenta" cx="12%" cy="82%" r="36%"><stop offset="0%" stop-color="#9b1748" stop-opacity="0.28"/><stop offset="100%" stop-color="#9b1748" stop-opacity="0"/></radialGradient>
     <linearGradient id="bh" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0"/><stop offset="18%" stop-color="#6b5433" stop-opacity="0.95"/><stop offset="82%" stop-color="#6b5433" stop-opacity="0.95"/><stop offset="100%" stop-color="#6b5433" stop-opacity="0"/></linearGradient>
-    <linearGradient id="sep" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d6a84a" stop-opacity="0"/><stop offset="15%" stop-color="#d6a84a" stop-opacity="0.55"/><stop offset="85%" stop-color="#d6a84a" stop-opacity="0.55"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0"/></linearGradient>
+    <linearGradient id="sep" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d6a84a" stop-opacity="0"/><stop offset="15%" stop-color="#d6a84a" stop-opacity="0.6"/><stop offset="85%" stop-color="#d6a84a" stop-opacity="0.6"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0"/></linearGradient>
   </defs>
   <rect width="900" height="140" fill="#080705" rx="14"/>
   <rect width="900" height="140" fill="url(#g-green)" rx="14"/>
@@ -155,18 +154,18 @@ function genHeader(profile) {
   <rect x="0.5" y="0.5" width="899" height="139" rx="13.5" fill="none" stroke="url(#bh)" stroke-width="1.2"/>
   <line x1="0" y1="26" x2="900" y2="26" stroke="url(#sep)" stroke-width="0.6" opacity="0.6"/>
   <line x1="0" y1="114" x2="900" y2="114" stroke="url(#sep)" stroke-width="0.6" opacity="0.6"/>
-  <circle cx="22" cy="70" r="3.5" fill="#d6a84a" opacity="0.65"/>
-  <line x1="28" y1="70" x2="50" y2="70" stroke="#6b5433" stroke-width="0.8" opacity="0.75"/>
-  <circle cx="878" cy="70" r="3.5" fill="#d6a84a" opacity="0.65"/>
-  <line x1="872" y1="70" x2="850" y2="70" stroke="#6b5433" stroke-width="0.8" opacity="0.75"/>
-  <text x="20" y="20" font-family="Georgia,serif" font-size="11" fill="#d6a84a" opacity="0.85">&#x2318;</text>
-  <text x="36" y="20" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2.5" font-weight="600">GITSKINS · RENAISSANCE</text>
+  <circle cx="22" cy="70" r="3.5" fill="#d6a84a" opacity="0.7"/>
+  <line x1="28" y1="70" x2="50" y2="70" stroke="#6b5433" stroke-width="0.8" opacity="0.8"/>
+  <circle cx="878" cy="70" r="3.5" fill="#d6a84a" opacity="0.7"/>
+  <line x1="872" y1="70" x2="850" y2="70" stroke="#6b5433" stroke-width="0.8" opacity="0.8"/>
+  <text x="20" y="20" font-family="Georgia,serif" font-size="11" fill="#d6a84a" opacity="0.9">&#x2318;</text>
+  <text x="36" y="20" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2.5" font-weight="600">GITSKINS · RENAISSANCE COMMAND</text>
   <text x="450" y="72" font-family="Georgia,'Times New Roman',serif" font-size="42" font-weight="700" fill="#e8e0d0" text-anchor="middle" letter-spacing="-1.2">${escapeXml(profile.login)}</text>
   <text x="450" y="97" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86" text-anchor="middle" letter-spacing="0.5">${subtitle}</text>
-  <text x="20" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.8">PROFILE SIGNAL · LIVE GITHUB DATA</text>
-  <text x="880" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.8" text-anchor="end">github.com/${escapeXml(profile.login)}</text>
-  <circle cx="240" cy="70" r="2" fill="#d6a84a" opacity="0.45"/>
-  <circle cx="660" cy="70" r="2" fill="#d6a84a" opacity="0.45"/>
+  <text x="20" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.85">PROFILE SIGNAL · LIVE GITHUB TELEMETRY</text>
+  <text x="880" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.85" text-anchor="end">github.com/${escapeXml(profile.login)}</text>
+  <circle cx="240" cy="70" r="2" fill="#d6a84a" opacity="0.5"/>
+  <circle cx="660" cy="70" r="2" fill="#d6a84a" opacity="0.5"/>
 </svg>`;
 }
 
@@ -178,11 +177,11 @@ function genProfileSignal(profile, avatarBase64) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240">
   <defs>
-    <radialGradient id="ps-g"  cx="82%" cy="12%" r="42%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.52"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
-    <radialGradient id="ps-t"  cx="80%" cy="92%" r="38%"><stop offset="0%" stop-color="#168b78" stop-opacity="0.4"/><stop offset="100%" stop-color="#168b78" stop-opacity="0"/></radialGradient>
-    <radialGradient id="ps-m"  cx="50%" cy="108%" r="44%"><stop offset="0%" stop-color="#9b1748" stop-opacity="0.58"/><stop offset="100%" stop-color="#9b1748" stop-opacity="0"/></radialGradient>
-    <radialGradient id="ps-go" cx="100%" cy="55%" r="30%"><stop offset="0%" stop-color="#f0c85a" stop-opacity="0.22"/><stop offset="100%" stop-color="#f0c85a" stop-opacity="0"/></radialGradient>
-    <linearGradient id="ps-b"  x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.95"/><stop offset="50%" stop-color="#d6a84a" stop-opacity="0.7"/><stop offset="100%" stop-color="#6b5433" stop-opacity="0.95"/></linearGradient>
+    <radialGradient id="ps-g"  cx="82%" cy="12%" r="42%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.55"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ps-t"  cx="80%" cy="92%" r="38%"><stop offset="0%" stop-color="#168b78" stop-opacity="0.45"/><stop offset="100%" stop-color="#168b78" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ps-m"  cx="50%" cy="108%" r="44%"><stop offset="0%" stop-color="#9b1748" stop-opacity="0.6"/><stop offset="100%" stop-color="#9b1748" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ps-go" cx="100%" cy="55%" r="30%"><stop offset="0%" stop-color="#f0c85a" stop-opacity="0.25"/><stop offset="100%" stop-color="#f0c85a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ps-b"  x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.95"/><stop offset="50%" stop-color="#d6a84a" stop-opacity="0.75"/><stop offset="100%" stop-color="#6b5433" stop-opacity="0.95"/></linearGradient>
     <clipPath id="ac"><circle cx="120" cy="120" r="54"/></clipPath>
   </defs>
   <rect width="900" height="240" fill="#17130f" rx="16"/>
@@ -192,28 +191,28 @@ function genProfileSignal(profile, avatarBase64) {
   <rect x="8" y="8" width="884" height="224" fill="url(#ps-t)"  rx="11"/>
   <rect x="8" y="8" width="884" height="224" fill="url(#ps-m)"  rx="11"/>
   <rect x="8" y="8" width="884" height="224" fill="url(#ps-go)" rx="11"/>
-  <rect x="8.5" y="8.5" width="883" height="223" rx="10.5" fill="none" stroke="#d6a84a" stroke-width="0.8" stroke-opacity="0.45"/>
-  <circle cx="760" cy="120" r="100" fill="none" stroke="#f0c85a" stroke-width="0.8" stroke-opacity="0.12"/>
-  <circle cx="760" cy="120" r="66"  fill="none" stroke="#e8e0d0" stroke-width="0.7" stroke-opacity="0.09"/>
-  <circle cx="760" cy="120" r="38"  fill="none" stroke="#d6a84a" stroke-width="0.7" stroke-opacity="0.15"/>
+  <rect x="8.5" y="8.5" width="883" height="223" rx="10.5" fill="none" stroke="#d6a84a" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="760" cy="120" r="100" fill="none" stroke="#f0c85a" stroke-width="0.8" stroke-opacity="0.14"/>
+  <circle cx="760" cy="120" r="66"  fill="none" stroke="#e8e0d0" stroke-width="0.7" stroke-opacity="0.1"/>
+  <circle cx="760" cy="120" r="38"  fill="none" stroke="#d6a84a" stroke-width="0.7" stroke-opacity="0.18"/>
   <circle cx="720" cy="84"  r="5"  fill="#f0c85a" opacity="0.9"/>
-  <circle cx="720" cy="84"  r="14" fill="#f0c85a" opacity="0.15"/>
+  <circle cx="720" cy="84"  r="14" fill="#f0c85a" opacity="0.18"/>
   <circle cx="160" cy="200" r="4.5" fill="#9b1748" opacity="0.85"/>
-  <circle cx="160" cy="200" r="11" fill="#9b1748" opacity="0.16"/>
-  <circle cx="790" cy="166" r="4" fill="#168b78" opacity="0.8"/>
-  <circle cx="790" cy="166" r="10"  fill="#168b78" opacity="0.15"/>
+  <circle cx="160" cy="200" r="11" fill="#9b1748" opacity="0.18"/>
+  <circle cx="790" cy="166" r="4" fill="#168b78" opacity="0.85"/>
+  <circle cx="790" cy="166" r="10"  fill="#168b78" opacity="0.18"/>
 
   <!-- Embedded Avatar Circle -->
   <circle cx="120" cy="120" r="60" fill="#f0c85a" fill-opacity="0.08" stroke="#f0c85a" stroke-width="1.2" stroke-opacity="0.6"/>
   <image href="${avatarBase64}" x="66" y="66" width="108" height="108" clip-path="url(#ac)" preserveAspectRatio="xMidYMid slice"/>
-  <circle cx="120" cy="120" r="60" fill="none" stroke="#5e8f45" stroke-width="1.5" stroke-opacity="0.4"/>
+  <circle cx="120" cy="120" r="60" fill="none" stroke="#5e8f45" stroke-width="1.5" stroke-opacity="0.45"/>
 
   <!-- Identity info -->
   <text x="214" y="88"  font-family="'Courier New',monospace" font-size="11.5" fill="#f0c85a" letter-spacing="2" font-weight="600">@${escapeXml(profile.login)}</text>
   <text x="214" y="140" font-family="Georgia,'Times New Roman',serif" font-size="54" font-weight="700" fill="#e8e0d0" letter-spacing="-2">${name}</text>
   <text x="214" y="168" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86" letter-spacing="0.4">${tagline}</text>
-  <text x="22"  y="228" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2" opacity="0.85" font-weight="600">PROFILE SIGNAL</text>
-  <text x="878" y="228" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2" opacity="0.85" text-anchor="end" font-weight="600">GITSKINS / RENAISSANCE</text>
+  <text x="22"  y="228" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2" opacity="0.9" font-weight="600">PROFILE SIGNAL</text>
+  <text x="878" y="228" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2" opacity="0.9" text-anchor="end" font-weight="600">GITSKINS / RENAISSANCE COMMAND</text>
 </svg>`;
 }
 
@@ -225,7 +224,7 @@ function genStatsCard(profile, repos, contribTotal) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
   <defs>
-    <linearGradient id="st-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.85"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.4"/></linearGradient>
+    <linearGradient id="st-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.9"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.45"/></linearGradient>
   </defs>
 
   <!-- Stars Card -->
@@ -251,17 +250,21 @@ function genStatsCard(profile, repos, contribTotal) {
 
   <!-- Contributions Card -->
   <rect x="684" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
-  <text x="704" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">CONTRIBUTIONS</text>
+  <text x="704" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">COMBAT ENERGY</text>
   <text x="704" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">${contribs}</text>
   <text x="704" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">past year activity</text>
   <text x="864" y="32" font-family="Georgia,serif" font-size="14" fill="#5e8f45" text-anchor="end">✦</text>
 </svg>`;
 }
 
+/**
+ * SPACE-SHOOTER RETRO ARCADE COMBAT VISUAL FOR CONTRIBUTION DATA
+ * Maps real 52-week contribution data into an alien fleet starship battle!
+ */
 function genContributionSignal(contribData) {
   const PAD = 30;
   const width = 900;
-  const height = 210;
+  const height = 250;
 
   let totalCount = 223;
   let rawContributions = [];
@@ -281,6 +284,7 @@ function genContributionSignal(contribData) {
     if (c.date) map.set(c.date, c.count || 0);
   }
 
+  // Build 52 weeks (364 days) grid
   const weeks = [];
   const endDate = new Date();
   const startDate = new Date(endDate);
@@ -301,77 +305,149 @@ function genContributionSignal(contribData) {
     weeks.push(week);
   }
 
+  // Month markers along top
   const monthLabels = [];
   let lastMonth = -1;
   weeks.forEach((w, i) => {
     const m = new Date(w[0].date).getMonth();
     if (m !== lastMonth) {
       monthLabels.push({
-        x: 48 + i * 15.5,
+        x: 46 + i * 15.4,
         name: new Date(w[0].date).toLocaleDateString('en-US', { month: 'short' }),
       });
       lastMonth = m;
     }
   });
 
-  const cellSize = 12;
-  const cellGap = 3.5;
-  const startX = 48;
-  const startY = 78;
+  // Vector Alien fleet & starfield rendering based on real 52-week dataset
+  const startX = 46;
+  const startY = 74;
 
-  const cellsSvg = weeks.map((w, wi) => {
-    return w.map((d, di) => {
-      const x = startX + wi * (cellSize + cellGap);
-      const y = startY + di * (cellSize + cellGap);
-      let fill = '#231d17';
-      if (d.count >= 1 && d.count <= 2) fill = '#4f412f';
-      else if (d.count >= 3 && d.count <= 5) fill = '#6f552d';
-      else if (d.count >= 6 && d.count <= 8) fill = '#a27c35';
-      else if (d.count >= 9) fill = '#5e8f45';
+  const fleetElements = [];
 
-      return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${cellSize}" height="${cellSize}" rx="2.5" fill="${fill}"/>`;
-    }).join('\n    ');
-  }).join('\n    ');
+  weeks.forEach((w, wi) => {
+    w.forEach((d, di) => {
+      const cx = startX + wi * 15.4 + 6;
+      const cy = startY + di * 12.5 + 5;
+      const count = d.count;
+
+      if (count === 0) {
+        // Deep space starfield particle
+        if ((wi * 7 + di) % 5 === 0) {
+          fleetElements.push(`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="1" fill="#4a3e31" opacity="0.4"/>`);
+        } else {
+          fleetElements.push(`<rect x="${(cx - 3.5).toFixed(1)}" y="${(cy - 3.5).toFixed(1)}" width="7" height="7" rx="1.5" fill="#1b1612"/>`);
+        }
+      } else if (count >= 1 && count <= 2) {
+        // Level 1: Scout Alien Invader (dim gold/brown silhouette)
+        fleetElements.push(
+          `<polygon points="${cx - 4},${cy - 2} ${cx},${cy - 5} ${cx + 4},${cy - 2} ${cx + 5},${cy + 2} ${cx + 2},${cy + 4} ${cx - 2},${cy + 4} ${cx - 5},${cy + 2}" fill="#4f412f" stroke="#6f552d" stroke-width="0.5"/>`
+        );
+      } else if (count >= 3 && count <= 5) {
+        // Level 2: Cruiser Alien (active glowing ship)
+        fleetElements.push(
+          `<polygon points="${cx - 5},${cy - 3} ${cx},${cy - 6} ${cx + 5},${cy - 3} ${cx + 6},${cy + 3} ${cx + 3},${cy + 5} ${cx - 3},${cy + 5} ${cx - 6},${cy + 3}" fill="#6f552d" stroke="#a27c35" stroke-width="0.8"/>` +
+          `<circle cx="${cx}" cy="${cy}" r="1.5" fill="#f0c85a"/>`
+        );
+      } else if (count >= 6 && count <= 8) {
+        // Level 3: Heavy Alien (combat impact / critical hits)
+        fleetElements.push(
+          `<polygon points="${cx - 6},${cy - 4} ${cx},${cy - 7} ${cx + 6},${cy - 4} ${cx + 6},${cy + 4} ${cx + 2},${cy + 6} ${cx - 2},${cy + 6} ${cx - 6},${cy + 4}" fill="#a27c35" stroke="#f0c85a" stroke-width="0.9"/>` +
+          `<circle cx="${cx}" cy="${cy}" r="2" fill="#5e8f45"/>` +
+          `<line x1="${cx - 7}" y1="${cy}" x2="${cx + 7}" y2="${cy}" stroke="#f0c85a" stroke-width="0.5" opacity="0.8"/>`
+        );
+      } else if (count >= 9) {
+        // Level 4: Destroyed / Exploding Alien (green energy burst)
+        fleetElements.push(
+          `<circle cx="${cx}" cy="${cy}" r="5" fill="#5e8f45" opacity="0.9"/>` +
+          `<circle cx="${cx}" cy="${cy}" r="2.5" fill="#e8e0d0"/>` +
+          `<line x1="${cx - 7}" y1="${cy - 7}" x2="${cx + 7}" y2="${cy + 7}" stroke="#5e8f45" stroke-width="0.8"/>` +
+          `<line x1="${cx - 7}" y1="${cy + 7}" x2="${cx + 7}" y2="${cy - 7}" stroke="#f0c85a" stroke-width="0.8"/>`
+        );
+      }
+    });
+  });
 
   const monthsSvg = monthLabels.map(m =>
-    `<text x="${m.x.toFixed(1)}" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">${m.name}</text>`
+    `<text x="${m.x.toFixed(1)}" y="62" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">${m.name}</text>`
   ).join('\n  ');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-  <rect width="${width}" height="${height}" fill="#17130f" rx="14"/>
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
-  
-  <text x="${PAD}" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION SIGNAL</text>
-  <text x="${PAD}" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">GitHub activity calendar</text>
-  <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="600">${totalCount} contributions in past year</text>
-  <line x1="${PAD}" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+  <defs>
+    <radialGradient id="space-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#1d1712"/><stop offset="100%" stop-color="#0c0907"/></radialGradient>
+    <linearGradient id="laser-beam" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#f0c85a" stop-opacity="0.9"/><stop offset="50%" stop-color="#168b78" stop-opacity="0.8"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></linearGradient>
+  </defs>
 
+  <rect width="${width}" height="${height}" fill="#17130f" rx="14"/>
+  <rect width="${width}" height="${height}" fill="url(#space-bg)" rx="14"/>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1.2" stroke-opacity="0.85"/>
+  
+  <!-- Arcade HUD Header -->
+  <text x="${PAD}" y="32" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION COMBAT SIGNAL</text>
+  <text x="${PAD}" y="50" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="600" fill="#e8e0d0">Starship Combat Log // Real GitHub Telemetry</text>
+  <text x="870" y="34" font-family="'Courier New',monospace" font-size="9.5" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="700">COMBAT POWER: ${totalCount} CONTRIBUTIONS</text>
+  <line x1="${PAD}" y1="56" x2="870" y2="56" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+
+  <!-- Month Labels -->
   ${monthsSvg}
 
-  <text x="26" y="90"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
-  <text x="26" y="121" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
-  <text x="26" y="152" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
+  <!-- Weekday Labels -->
+  <text x="24" y="83"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
+  <text x="24" y="108" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
+  <text x="24" y="133" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
 
-  ${cellsSvg}
+  <!-- 364 Real Days mapped into Alien Fleet Battle Grid -->
+  <g>
+    ${fleetElements.join('\n    ')}
+  </g>
 
-  <text x="730" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Less</text>
-  <rect x="758" y="188" width="10" height="10" rx="2" fill="#231d17"/>
-  <rect x="772" y="188" width="10" height="10" rx="2" fill="#4f412f"/>
-  <rect x="786" y="188" width="10" height="10" rx="2" fill="#6f552d"/>
-  <rect x="800" y="188" width="10" height="10" rx="2" fill="#a27c35"/>
-  <rect x="814" y="188" width="10" height="10" rx="2" fill="#5e8f45"/>
-  <text x="832" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">More</text>
+  <!-- Laser Beam Cannon Blast (Upward from Player Starship) -->
+  <line x1="450" y1="210" x2="450" y2="70" stroke="url(#laser-beam)" stroke-width="2" stroke-dasharray="6,3"/>
+  <circle cx="450" cy="115" r="8" fill="#f0c85a" opacity="0.3"/>
+  <circle cx="450" cy="115" r="3" fill="#e8e0d0"/>
 
-  <text x="${PAD}" y="196" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.5" opacity="0.8">Real contribution history · updated dynamically</text>
+  <!-- Player Starship (Bottom Center) -->
+  <g transform="translate(450, 216)">
+    <!-- Engine Glow -->
+    <polygon points="-4,10 0,18 4,10" fill="#5e8f45" opacity="0.85"/>
+    <polygon points="-2,10 0,15 2,10" fill="#f0c85a" opacity="0.9"/>
+    <!-- Hull -->
+    <path d="M 0,-18 L -14,8 L -8,8 L -6,12 L 6,12 L 8,8 L 14,8 Z" fill="#d6a84a" stroke="#f0c85a" stroke-width="0.8"/>
+    <!-- Cockpit -->
+    <ellipse cx="0" cy="-4" rx="3.5" ry="6" fill="#168b78" stroke="#e8e0d0" stroke-width="0.5"/>
+    <!-- Wings detail -->
+    <line x1="-14" y1="8" x2="-8" y2="-4" stroke="#6b5433" stroke-width="0.6"/>
+    <line x1="14" y1="8" x2="8" y2="-4" stroke="#6b5433" stroke-width="0.6"/>
+  </g>
+  <text x="450" y="244" font-family="'Courier New',monospace" font-size="7.5" fill="#f0c85a" text-anchor="middle" letter-spacing="2" font-weight="600">RENAISSANCE STARSHIP FLAGSHIP</text>
+
+  <!-- Arcade Legend (Bottom Right) -->
+  <g transform="translate(620, 230)">
+    <text x="0" y="10" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">STATUS:</text>
+    
+    <rect x="52" y="3" width="7" height="7" rx="1.5" fill="#1b1612"/>
+    <text x="63" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">0 Space</text>
+
+    <polygon points="104,3 108,1 112,3 113,7 103,7" fill="#4f412f"/>
+    <text x="116" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">1-2 Patrol</text>
+
+    <polygon points="164,3 168,1 172,3 173,7 163,7" fill="#6f552d" stroke="#a27c35" stroke-width="0.5"/>
+    <text x="176" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">3-5 Engaged</text>
+
+    <circle cx="224" cy="6" r="3.5" fill="#5e8f45"/>
+    <text x="231" y="10" font-family="'Courier New',monospace" font-size="7" fill="#5e8f45" font-weight="600">9+ Destroyed</text>
+  </g>
+
+  <text x="${PAD}" y="244" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.5" opacity="0.85">364 days converted into combat energy · pure vector telemetry</text>
 </svg>`;
 }
 
 function genSkinCard() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="130" viewBox="0 0 900 130">
   <defs>
-    <radialGradient id="sk-green" cx="90%" cy="10%" r="35%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.18"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
-    <linearGradient id="sk-border" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.9"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.55"/></linearGradient>
-    <linearGradient id="top-rule" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d6a84a" stop-opacity="0"/><stop offset="20%" stop-color="#d6a84a" stop-opacity="0.65"/><stop offset="80%" stop-color="#d6a84a" stop-opacity="0.65"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0"/></linearGradient>
+    <radialGradient id="sk-green" cx="90%" cy="10%" r="35%"><stop offset="0%" stop-color="#5e8f45" stop-opacity="0.2"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sk-border" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.95"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.6"/></linearGradient>
+    <linearGradient id="top-rule" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d6a84a" stop-opacity="0"/><stop offset="20%" stop-color="#d6a84a" stop-opacity="0.7"/><stop offset="80%" stop-color="#d6a84a" stop-opacity="0.7"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0"/></linearGradient>
   </defs>
 
   <rect width="900" height="130" fill="#17130f" rx="14"/>
@@ -382,9 +458,9 @@ function genSkinCard() {
   <text x="30" y="36" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">SKIN TEMPLATE</text>
   <circle cx="176" cy="32" r="2" fill="#6b5433" opacity="0.5"/>
 
-  <text x="30" y="72" font-family="Georgia,'Times New Roman',serif" font-size="32" font-weight="700" fill="#e8e0d0" letter-spacing="-0.5">Renaissance</text>
-  <text x="30" y="96" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86">Archive-grade developer profile with manuscript detail and live GitHub statistics.</text>
-  <text x="30" y="118" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="1.5" opacity="0.85">Designed for @${USERNAME} · inspired by GitSkins · powered by the public GitHub API</text>
+  <text x="30" y="72" font-family="Georgia,'Times New Roman',serif" font-size="32" font-weight="700" fill="#e8e0d0" letter-spacing="-0.5">Renaissance Starship</text>
+  <text x="30" y="96" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86">Archive-grade developer profile with manuscript detail and space combat telemetry.</text>
+  <text x="30" y="118" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="1.5" opacity="0.85">Designed for @${USERNAME} · inspired by GitSkins · powered by public GitHub API</text>
 
   <rect x="800" y="44" width="76" height="26" rx="13" fill="#f5f0e5"/>
   <text x="838" y="61" font-family="Georgia,'Times New Roman',serif" font-size="11" font-weight="600" fill="#191611" text-anchor="middle">✦ Share</text>
@@ -414,7 +490,7 @@ function genLanguageStack(langs) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="${totalH}" viewBox="0 0 900 ${totalH}">
   <rect width="900" height="${totalH}" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="${totalH - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
-  <text x="${PAD}" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">LANGUAGE &amp; TECH STACK</text>
+  <text x="${PAD}" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">LANGUAGE &amp; TECH TELEMETRY</text>
   <text x="${PAD}" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repository-weighted technologies</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#d6a84a" letter-spacing="2" text-anchor="end" opacity="0.8">› stack.scan_</text>
   <line x1="${PAD}" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
@@ -453,7 +529,6 @@ function genLanguageStack(langs) {
 }
 
 function genFeaturedProjects(repos) {
-  // Select 3 featured repos (CCTV_PI, Jarvis, CamZ)
   const items = repos.slice(0, 3);
   const cardW = 274;
   const cardH = 220;
@@ -470,7 +545,6 @@ function genFeaturedProjects(repos) {
     const stars = r.stargazers_count || 0;
     const forks = r.forks_count || 0;
 
-    // Line wrap description (max ~34 chars per line, max 4 lines)
     const words = rawDesc.split(' ');
     const lines = [];
     let cur = '';
@@ -486,10 +560,10 @@ function genFeaturedProjects(repos) {
     const descLines = lines.slice(0, 4).map(escapeXml);
 
     return `
-  <!-- Project Card ${i + 1}: ${name} -->
+  <!-- Mission Dossier ${i + 1}: ${name} -->
   <rect x="${x}" y="${y}" width="${cardW}" height="${cardH}" rx="12" fill="#0e0b08" stroke="#6b5433" stroke-width="0.9" stroke-opacity="0.8"/>
   
-  <text x="${x + 16}" y="${y + 24}" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3" font-weight="600">REPOSITORY</text>
+  <text x="${x + 16}" y="${y + 24}" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="3" font-weight="600">MISSION // ${name.toUpperCase()}</text>
   <text x="${x + cardW - 16}" y="${y + 24}" font-family="Georgia,serif" font-size="12" fill="#d6a84a" text-anchor="end">&#x2197;</text>
   
   <text x="${x + 16}" y="${y + 50}" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#e8e0d0">${name}</text>
@@ -511,8 +585,8 @@ function genFeaturedProjects(repos) {
   <rect width="900" height="${totalH}" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="${totalH - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
   
-  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">FEATURED PROJECTS</text>
-  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repositories worth opening</text>
+  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">PROJECT DOSSIERS</text>
+  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Featured open source missions</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#6f6557" text-anchor="end" opacity="0.85">ranked by stars · activity · relevance</text>
   <line x1="30" y1="64" x2="870" y2="64" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
   
@@ -524,7 +598,7 @@ function genFooter() {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="60" viewBox="0 0 900 60">
   <rect width="900" height="60" fill="#080705" rx="8"/>
   <line x1="0" y1="1" x2="900" y2="1" stroke="#6b5433" stroke-width="0.8" opacity="0.6"/>
-  <text x="30" y="36" font-family="'Courier New',monospace" font-size="9" fill="#6b5433" letter-spacing="2">Renaissance interface · live public GitHub data</text>
+  <text x="30" y="36" font-family="'Courier New',monospace" font-size="9" fill="#6b5433" letter-spacing="2">MISSION COMPLETE · live public GitHub telemetry</text>
   <circle cx="450" cy="30" r="2" fill="#d6a84a" opacity="0.4"/>
   <text x="870" y="36" font-family="'Courier New',monospace" font-size="9" fill="#6b5433" letter-spacing="2" text-anchor="end">github.com/${USERNAME}</text>
 </svg>`;

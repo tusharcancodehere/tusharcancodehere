@@ -2,16 +2,16 @@
   <rect width="900" height="310" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="309" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
   
-  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">FEATURED PROJECTS</text>
-  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repositories worth opening</text>
+  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">PROJECT DOSSIERS</text>
+  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Featured open source missions</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#6f6557" text-anchor="end" opacity="0.85">ranked by stars · activity · relevance</text>
   <line x1="30" y1="64" x2="870" y2="64" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
   
   
-  <!-- Project Card 1: CCTV_PI -->
+  <!-- Mission Dossier 1: CCTV_PI -->
   <rect x="20" y="72" width="274" height="220" rx="12" fill="#0e0b08" stroke="#6b5433" stroke-width="0.9" stroke-opacity="0.8"/>
   
-  <text x="36" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3" font-weight="600">REPOSITORY</text>
+  <text x="36" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="3" font-weight="600">MISSION // CCTV_PI</text>
   <text x="278" y="96" font-family="Georgia,serif" font-size="12" fill="#d6a84a" text-anchor="end">&#x2197;</text>
   
   <text x="36" y="122" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#e8e0d0">CCTV_PI</text>
@@ -30,10 +30,10 @@
   
   <line x1="36" y1="264" x2="278" y2="264" stroke="#6b5433" stroke-width="0.4" stroke-opacity="0.4"/>
   <text x="36" y="279" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/CCTV_PI</text>
-  <!-- Project Card 2: Jarvis -->
+  <!-- Mission Dossier 2: Jarvis -->
   <rect x="306" y="72" width="274" height="220" rx="12" fill="#0e0b08" stroke="#6b5433" stroke-width="0.9" stroke-opacity="0.8"/>
   
-  <text x="322" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3" font-weight="600">REPOSITORY</text>
+  <text x="322" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="3" font-weight="600">MISSION // JARVIS</text>
   <text x="564" y="96" font-family="Georgia,serif" font-size="12" fill="#d6a84a" text-anchor="end">&#x2197;</text>
   
   <text x="322" y="122" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#e8e0d0">Jarvis</text>
@@ -51,10 +51,10 @@
   
   <line x1="322" y1="264" x2="564" y2="264" stroke="#6b5433" stroke-width="0.4" stroke-opacity="0.4"/>
   <text x="322" y="279" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/Jarvis</text>
-  <!-- Project Card 3: CamZ -->
+  <!-- Mission Dossier 3: CamZ -->
   <rect x="592" y="72" width="274" height="220" rx="12" fill="#0e0b08" stroke="#6b5433" stroke-width="0.9" stroke-opacity="0.8"/>
   
-  <text x="608" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3" font-weight="600">REPOSITORY</text>
+  <text x="608" y="96" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="3" font-weight="600">MISSION // CAMZ</text>
   <text x="850" y="96" font-family="Georgia,serif" font-size="12" fill="#d6a84a" text-anchor="end">&#x2197;</text>
   
   <text x="608" y="122" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#e8e0d0">CamZ</text>
