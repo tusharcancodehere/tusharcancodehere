@@ -9,13 +9,8 @@
  * Usage:
  *   node scripts/update-profile.js
  *
- * Features:
- * - Base64 embeds GitHub avatar so image never breaks on GitHub
- * - Generates 100% self-contained statistics card (stats.svg)
- * - Generates authentic 52-week contribution calendar SVG (contribution-signal.svg)
- * - Generates language & technology stack SVG (language-stack.svg)
- * - Generates featured project cards SVG (projects.svg)
- * - Generates Renaissance skin template (skin-card.svg) & header/footer
+ * All SVGs use pure SVG vector elements (<rect>, <circle>, <text>, <path>, <line>)
+ * for 100% reliable rendering on GitHub.
  */
 
 const fs = require('fs');
@@ -57,8 +52,7 @@ async function fetchContributions() {
   try {
     const res = await fetch(CONTRIB_API);
     if (!res.ok) throw new Error(`Contribution API ${res.status}`);
-    const data = await res.json();
-    return data;
+    return await res.json();
   } catch (err) {
     console.warn('Contribution API fetch warning:', err.message);
     return null;
@@ -91,17 +85,16 @@ function summariseLanguages(repos) {
 
 function pickFeatured(repos) {
   return [...repos]
-    .filter(r => !r.fork)
+    .filter(r => !r.fork && r.name !== USERNAME)
     .sort((a, b) => {
-      const sa = (a.stargazers_count || 0) * 5
-               + (a.forks_count || 0) * 2
-               + new Date(a.pushed_at || 0).getTime() / 1e12;
-      const sb = (b.stargazers_count || 0) * 5
-               + (b.forks_count || 0) * 2
-               + new Date(b.pushed_at || 0).getTime() / 1e12;
+      // Prioritize repos with descriptions first
+      const descA = a.description ? 500 : 0;
+      const descB = b.description ? 500 : 0;
+      const sa = descA + (a.stargazers_count || 0) * 5 + (a.forks_count || 0) * 2 + new Date(a.pushed_at || 0).getTime() / 1e12;
+      const sb = descB + (b.stargazers_count || 0) * 5 + (b.forks_count || 0) * 2 + new Date(b.pushed_at || 0).getTime() / 1e12;
       return sb - sa;
     })
-    .slice(0, 6);
+    .slice(0, 3);
 }
 
 function relativeDate(iso) {
@@ -130,13 +123,23 @@ function langColor(lang) {
   return LANG_COLOR[lang] || '#6b5433';
 }
 
+function escapeXml(str) {
+  if (!str) return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // SVG Generators
 // ─────────────────────────────────────────────────────────────────────────────
 
 function genHeader(profile) {
-  const name     = profile.name || profile.login;
-  const location = profile.location || 'New Delhi';
+  const name     = escapeXml(profile.name || profile.login);
+  const location = escapeXml(profile.location || 'New Delhi');
   const subtitle = `${name} · ${location} · Open Source Builder`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="140" viewBox="0 0 900 140">
@@ -158,20 +161,20 @@ function genHeader(profile) {
   <line x1="872" y1="70" x2="850" y2="70" stroke="#6b5433" stroke-width="0.8" opacity="0.75"/>
   <text x="20" y="20" font-family="Georgia,serif" font-size="11" fill="#d6a84a" opacity="0.85">&#x2318;</text>
   <text x="36" y="20" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2.5" font-weight="600">GITSKINS · RENAISSANCE</text>
-  <text x="450" y="72" font-family="Georgia,'Times New Roman',serif" font-size="42" font-weight="700" fill="#e8e0d0" text-anchor="middle" letter-spacing="-1.2">${profile.login}</text>
+  <text x="450" y="72" font-family="Georgia,'Times New Roman',serif" font-size="42" font-weight="700" fill="#e8e0d0" text-anchor="middle" letter-spacing="-1.2">${escapeXml(profile.login)}</text>
   <text x="450" y="97" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86" text-anchor="middle" letter-spacing="0.5">${subtitle}</text>
   <text x="20" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.8">PROFILE SIGNAL · LIVE GITHUB DATA</text>
-  <text x="880" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.8" text-anchor="end">github.com/${profile.login}</text>
+  <text x="880" y="130" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.8" opacity="0.8" text-anchor="end">github.com/${escapeXml(profile.login)}</text>
   <circle cx="240" cy="70" r="2" fill="#d6a84a" opacity="0.45"/>
   <circle cx="660" cy="70" r="2" fill="#d6a84a" opacity="0.45"/>
 </svg>`;
 }
 
 function genProfileSignal(profile, avatarBase64) {
-  const name    = profile.name || profile.login;
-  const tagline = profile.bio
+  const name    = escapeXml(profile.name || profile.login);
+  const tagline = escapeXml(profile.bio
     ? (profile.bio.length > 80 ? profile.bio.slice(0, 80) + '…' : profile.bio)
-    : 'Builder · Open Source · Python Developer · New Delhi';
+    : 'Builder · Open Source · Python Developer · New Delhi');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240">
   <defs>
@@ -200,13 +203,13 @@ function genProfileSignal(profile, avatarBase64) {
   <circle cx="790" cy="166" r="4" fill="#168b78" opacity="0.8"/>
   <circle cx="790" cy="166" r="10"  fill="#168b78" opacity="0.15"/>
 
-  <!-- Base64 Embedded Avatar Circle -->
+  <!-- Embedded Avatar Circle -->
   <circle cx="120" cy="120" r="60" fill="#f0c85a" fill-opacity="0.08" stroke="#f0c85a" stroke-width="1.2" stroke-opacity="0.6"/>
   <image href="${avatarBase64}" x="66" y="66" width="108" height="108" clip-path="url(#ac)" preserveAspectRatio="xMidYMid slice"/>
   <circle cx="120" cy="120" r="60" fill="none" stroke="#5e8f45" stroke-width="1.5" stroke-opacity="0.4"/>
 
   <!-- Identity info -->
-  <text x="214" y="88"  font-family="'Courier New',monospace" font-size="11.5" fill="#f0c85a" letter-spacing="2" font-weight="600">@${profile.login}</text>
+  <text x="214" y="88"  font-family="'Courier New',monospace" font-size="11.5" fill="#f0c85a" letter-spacing="2" font-weight="600">@${escapeXml(profile.login)}</text>
   <text x="214" y="140" font-family="Georgia,'Times New Roman',serif" font-size="54" font-weight="700" fill="#e8e0d0" letter-spacing="-2">${name}</text>
   <text x="214" y="168" font-family="Georgia,'Times New Roman',serif" font-size="13" font-style="italic" fill="#a89b86" letter-spacing="0.4">${tagline}</text>
   <text x="22"  y="228" font-family="'Courier New',monospace" font-size="8" fill="#6b5433" letter-spacing="2" opacity="0.85" font-weight="600">PROFILE SIGNAL</text>
@@ -273,19 +276,16 @@ function genContributionSignal(contribData) {
     }
   }
 
-  // Map contributions by date (YYYY-MM-DD)
   const map = new Map();
   for (const c of rawContributions) {
     if (c.date) map.set(c.date, c.count || 0);
   }
 
-  // Generate 52 weeks (364 days) ending today
   const weeks = [];
   const endDate = new Date();
   const startDate = new Date(endDate);
   startDate.setDate(startDate.getDate() - 363);
 
-  // Align start to preceding Sunday
   const startSun = new Date(startDate);
   startSun.setDate(startSun.getDate() - startSun.getDay());
 
@@ -301,7 +301,6 @@ function genContributionSignal(contribData) {
     weeks.push(week);
   }
 
-  // Month labels
   const monthLabels = [];
   let lastMonth = -1;
   weeks.forEach((w, i) => {
@@ -315,7 +314,6 @@ function genContributionSignal(contribData) {
     }
   });
 
-  // Render heat cells
   const cellSize = 12;
   const cellGap = 3.5;
   const startX = 48;
@@ -325,11 +323,11 @@ function genContributionSignal(contribData) {
     return w.map((d, di) => {
       const x = startX + wi * (cellSize + cellGap);
       const y = startY + di * (cellSize + cellGap);
-      let fill = '#231d17'; // level 0 (dark brown manuscript inactive)
-      if (d.count >= 1 && d.count <= 2) fill = '#4f412f'; // level 1
-      else if (d.count >= 3 && d.count <= 5) fill = '#6f552d'; // level 2
-      else if (d.count >= 6 && d.count <= 8) fill = '#a27c35'; // level 3 (gold)
-      else if (d.count >= 9) fill = '#5e8f45'; // level 4 (green glow)
+      let fill = '#231d17';
+      if (d.count >= 1 && d.count <= 2) fill = '#4f412f';
+      else if (d.count >= 3 && d.count <= 5) fill = '#6f552d';
+      else if (d.count >= 6 && d.count <= 8) fill = '#a27c35';
+      else if (d.count >= 9) fill = '#5e8f45';
 
       return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${cellSize}" height="${cellSize}" rx="2.5" fill="${fill}"/>`;
     }).join('\n    ');
@@ -343,24 +341,19 @@ function genContributionSignal(contribData) {
   <rect width="${width}" height="${height}" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
   
-  <!-- Header -->
   <text x="${PAD}" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION SIGNAL</text>
   <text x="${PAD}" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">GitHub activity calendar</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="600">${totalCount} contributions in past year</text>
   <line x1="${PAD}" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
 
-  <!-- Month Labels -->
   ${monthsSvg}
 
-  <!-- Weekday Labels -->
   <text x="26" y="90"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
   <text x="26" y="121" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
   <text x="26" y="152" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
 
-  <!-- Heatmap Cells -->
   ${cellsSvg}
 
-  <!-- Legend -->
   <text x="730" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Less</text>
   <rect x="758" y="188" width="10" height="10" rx="2" fill="#231d17"/>
   <rect x="772" y="188" width="10" height="10" rx="2" fill="#4f412f"/>
@@ -460,54 +453,69 @@ function genLanguageStack(langs) {
 }
 
 function genFeaturedProjects(repos) {
-  const items  = repos.slice(0, 6);
-  const cols   = Math.min(3, items.length);
-  const cardW  = Math.floor(860 / cols);
-  const cardH  = 240;
-  const totalH = cardH + 78;
+  // Select 3 featured repos (CCTV_PI, Jarvis, CamZ)
+  const items = repos.slice(0, 3);
+  const cardW = 274;
+  const cardH = 220;
+  const totalH = 310;
 
   const cards = items.map((r, i) => {
-    const col  = i % cols;
-    const row  = Math.floor(i / cols);
-    const x    = 20 + col * cardW;
-    const y    = 68 + row * (cardH + 10);
-    const desc = r.description
-      ? (r.description.length > 80 ? r.description.slice(0, 80) + '…' : r.description)
-      : 'No description provided.';
-    const lang  = r.language || 'Python';
+    const x = 20 + i * (cardW + 12);
+    const y = 72;
+    const name = escapeXml(r.name);
+    const rawDesc = r.description || 'No description provided.';
+    const lang = escapeXml(r.language || 'Python');
     const color = langColor(lang);
     const updated = relativeDate(r.pushed_at || r.updated_at);
+    const stars = r.stargazers_count || 0;
+    const forks = r.forks_count || 0;
 
-    const words = desc.split(' ');
+    // Line wrap description (max ~34 chars per line, max 4 lines)
+    const words = rawDesc.split(' ');
     const lines = [];
     let cur = '';
     for (const w of words) {
-      if ((cur + ' ' + w).length > 36 && cur) { lines.push(cur); cur = w; }
-      else { cur = cur ? `${cur} ${w}` : w; }
+      if ((cur + ' ' + w).length > 34 && cur) {
+        lines.push(cur);
+        cur = w;
+      } else {
+        cur = cur ? `${cur} ${w}` : w;
+      }
     }
     if (cur) lines.push(cur);
-    const descLines = lines.slice(0, 4);
+    const descLines = lines.slice(0, 4).map(escapeXml);
 
     return `
-  <rect x="${x}" y="${y}" width="${cardW - 10}" height="${cardH}" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
-  <text x="${x + 16}" y="${y + 22}" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
-  <text x="${x + cardW - 26}" y="${y + 22}" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
-  <text x="${x + 16}" y="${y + 48}" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">${r.name}</text>
-  ${descLines.map((l, li) => `<text x="${x + 16}" y="${y + 68 + li * 16}" font-family="Georgia,serif" font-size="11" fill="#a89b86">${l}</text>`).join('\n  ')}
-  <circle cx="${x + 24}" cy="${y + 172}" r="4" fill="${color}"/>
-  <text x="${x + 36}" y="${y + 176}" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">${lang}</text>
-  <text x="${x + 36 + lang.length * 7}" y="${y + 176}" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ ${r.stargazers_count || 0}</text>
-  <text x="${x + 36 + lang.length * 7 + 44}" y="${y + 176}" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ ${r.forks_count || 0}</text>
-  <text x="${x + 16}" y="${y + 196}" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated ${updated}</text>
-  <text x="${x + 16}" y="${y + 226}" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/${USERNAME}/${r.name}</text>`;
+  <!-- Project Card ${i + 1}: ${name} -->
+  <rect x="${x}" y="${y}" width="${cardW}" height="${cardH}" rx="12" fill="#0e0b08" stroke="#6b5433" stroke-width="0.9" stroke-opacity="0.8"/>
+  
+  <text x="${x + 16}" y="${y + 24}" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3" font-weight="600">REPOSITORY</text>
+  <text x="${x + cardW - 16}" y="${y + 24}" font-family="Georgia,serif" font-size="12" fill="#d6a84a" text-anchor="end">&#x2197;</text>
+  
+  <text x="${x + 16}" y="${y + 50}" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="700" fill="#e8e0d0">${name}</text>
+  
+  ${descLines.map((l, li) => `<text x="${x + 16}" y="${y + 72 + li * 16}" font-family="Georgia,serif" font-size="11" fill="#a89b86">${l}</text>`).join('\n  ')}
+  
+  <circle cx="${x + 22}" cy="${y + 154}" r="4" fill="${color}"/>
+  <text x="${x + 32}" y="${y + 158}" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">${lang}</text>
+  <text x="${x + 115}" y="${y + 158}" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">&#x2605; ${stars}</text>
+  <text x="${x + 175}" y="${y + 158}" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">&#x2442; ${forks}</text>
+  
+  <text x="${x + 16}" y="${y + 178}" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated ${updated}</text>
+  
+  <line x1="${x + 16}" y1="${y + 192}" x2="${x + cardW - 16}" y2="${y + 192}" stroke="#6b5433" stroke-width="0.4" stroke-opacity="0.4"/>
+  <text x="${x + 16}" y="${y + 207}" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/${USERNAME}/${name}</text>`;
   }).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="${totalH}" viewBox="0 0 900 ${totalH}">
   <rect width="900" height="${totalH}" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="${totalH - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
+  
   <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">FEATURED PROJECTS</text>
   <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repositories worth opening</text>
+  <text x="870" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#6f6557" text-anchor="end" opacity="0.85">ranked by stars · activity · relevance</text>
   <line x1="30" y1="64" x2="870" y2="64" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+  
   ${cards}
 </svg>`;
 }

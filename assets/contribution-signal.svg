@@ -2,13 +2,11 @@
   <rect width="900" height="210" fill="#17130f" rx="14"/>
   <rect x="0.5" y="0.5" width="899" height="209" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
   
-  <!-- Header -->
   <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION SIGNAL</text>
   <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">GitHub activity calendar</text>
   <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="600">223 contributions in past year</text>
   <line x1="30" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
 
-  <!-- Month Labels -->
   <text x="48.0" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Aug</text>
   <text x="110.0" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Sep</text>
   <text x="172.0" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Oct</text>
@@ -23,12 +21,10 @@
   <text x="776.5" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Jul</text>
   <text x="838.5" y="66" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Aug</text>
 
-  <!-- Weekday Labels -->
   <text x="26" y="90"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
   <text x="26" y="121" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
   <text x="26" y="152" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
 
-  <!-- Heatmap Cells -->
   <rect x="48.0" y="78.0" width="12" height="12" rx="2.5" fill="#231d17"/>
     <rect x="48.0" y="93.5" width="12" height="12" rx="2.5" fill="#231d17"/>
     <rect x="48.0" y="109.0" width="12" height="12" rx="2.5" fill="#231d17"/>
@@ -394,7 +390,6 @@
     <rect x="838.5" y="155.5" width="12" height="12" rx="2.5" fill="#6f552d"/>
     <rect x="838.5" y="171.0" width="12" height="12" rx="2.5" fill="#5e8f45"/>
 
-  <!-- Legend -->
   <text x="730" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Less</text>
   <rect x="758" y="188" width="10" height="10" rx="2" fill="#231d17"/>
   <rect x="772" y="188" width="10" height="10" rx="2" fill="#4f412f"/>
