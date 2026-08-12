@@ -4,7 +4,7 @@
   ║  GitHub Profile README — Renaissance Starship · GitSkins             ║
   ║                                                                      ║
   ║  All displayed data is sourced from public GitHub API.               ║
-  ║  Run  node scripts/update-profile.js  to regenerate SVG assets.    ║
+  ║  Run  node scripts/update-profile.js  to regenerate SVG & GIF.      ║
   ╚══════════════════════════════════════════════════════════════════════╝
 -->
 
@@ -98,11 +98,11 @@
 
 ---
 
-<!-- ── 7. CONTRIBUTION SIGNAL (SPACE-SHOOTER COMBAT SCENE) ──────────── -->
+<!-- ── 7. CONTRIBUTION SIGNAL (ANIMATED SPACE-SHOOTER COMBAT SCENE) ───── -->
 <p align="center">
   <img
-    src="assets/contribution-signal.svg"
-    alt="Contribution Combat Signal — Retro Space-Shooter Alien Invasion Battle"
+    src="assets/starship-activity.gif"
+    alt="Animated starship battle representing GitHub contribution activity"
     width="900"
   />
 </p>
@@ -110,6 +110,21 @@
 <p align="center">
   <samp>223 contributions over the last year converted into starship combat energy.</samp>
 </p>
+
+<details>
+<summary><samp>◈ Static Contribution Matrix Fallback</samp></summary>
+
+<br/>
+
+<p align="center">
+  <img
+    src="assets/contribution-signal.svg"
+    alt="Contribution Signal — Static Matrix Fallback"
+    width="900"
+  />
+</p>
+
+</details>
 
 ---
 

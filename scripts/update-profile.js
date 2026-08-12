@@ -4,17 +4,16 @@
  *
  * Native CommonJS script (zero npm dependencies, Node.js 18+).
  * Fetches live public GitHub data for @tusharcancodehere and generates
- * self-contained, high-resolution SVG assets in assets/.
+ * self-contained, high-resolution SVG assets in assets/ and invokes
+ * scripts/generate_gif.py to build assets/starship-activity.gif.
  *
  * Usage:
  *   node scripts/update-profile.js
- *
- * All SVGs use pure SVG vector elements (<rect>, <circle>, <path>, <polygon>, <line>, <text>)
- * for 100% reliable rendering on GitHub.
  */
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ASSETS_DIR = path.resolve(__dirname, '..', 'assets');
 const USERNAME   = 'tusharcancodehere';
@@ -131,10 +130,6 @@ function escapeXml(str) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&apos;');
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-// SVG Generators
-// ─────────────────────────────────────────────────────────────────────────────
 
 function genHeader(profile) {
   const name     = escapeXml(profile.name || profile.login);
@@ -257,11 +252,7 @@ function genStatsCard(profile, repos, contribTotal) {
 </svg>`;
 }
 
-/**
- * SPACE-SHOOTER RETRO ARCADE COMBAT VISUAL FOR CONTRIBUTION DATA
- * Maps real 52-week contribution data into an alien fleet starship battle!
- */
-function genContributionSignal(contribData) {
+function genContributionSignalStatic(contribData) {
   const PAD = 30;
   const width = 900;
   const height = 250;
@@ -284,7 +275,6 @@ function genContributionSignal(contribData) {
     if (c.date) map.set(c.date, c.count || 0);
   }
 
-  // Build 52 weeks (364 days) grid
   const weeks = [];
   const endDate = new Date();
   const startDate = new Date(endDate);
@@ -305,140 +295,68 @@ function genContributionSignal(contribData) {
     weeks.push(week);
   }
 
-  // Month markers along top
   const monthLabels = [];
   let lastMonth = -1;
   weeks.forEach((w, i) => {
     const m = new Date(w[0].date).getMonth();
     if (m !== lastMonth) {
       monthLabels.push({
-        x: 46 + i * 15.4,
+        x: 48 + i * 15.4,
         name: new Date(w[0].date).toLocaleDateString('en-US', { month: 'short' }),
       });
       lastMonth = m;
     }
   });
 
-  // Vector Alien fleet & starfield rendering based on real 52-week dataset
-  const startX = 46;
-  const startY = 74;
+  const cellSize = 12;
+  const cellGap = 3.4;
+  const startX = 48;
+  const startY = 70;
 
-  const fleetElements = [];
+  const cellsSvg = weeks.map((w, wi) => {
+    return w.map((d, di) => {
+      const x = startX + wi * (cellSize + cellGap);
+      const y = startY + di * (cellSize + cellGap);
+      let fill = '#231d17';
+      if (d.count >= 1 && d.count <= 2) fill = '#4f412f';
+      else if (d.count >= 3 && d.count <= 5) fill = '#6f552d';
+      else if (d.count >= 6 && d.count <= 8) fill = '#a27c35';
+      else if (d.count >= 9) fill = '#5e8f45';
 
-  weeks.forEach((w, wi) => {
-    w.forEach((d, di) => {
-      const cx = startX + wi * 15.4 + 6;
-      const cy = startY + di * 12.5 + 5;
-      const count = d.count;
-
-      if (count === 0) {
-        // Deep space starfield particle
-        if ((wi * 7 + di) % 5 === 0) {
-          fleetElements.push(`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="1" fill="#4a3e31" opacity="0.4"/>`);
-        } else {
-          fleetElements.push(`<rect x="${(cx - 3.5).toFixed(1)}" y="${(cy - 3.5).toFixed(1)}" width="7" height="7" rx="1.5" fill="#1b1612"/>`);
-        }
-      } else if (count >= 1 && count <= 2) {
-        // Level 1: Scout Alien Invader (dim gold/brown silhouette)
-        fleetElements.push(
-          `<polygon points="${cx - 4},${cy - 2} ${cx},${cy - 5} ${cx + 4},${cy - 2} ${cx + 5},${cy + 2} ${cx + 2},${cy + 4} ${cx - 2},${cy + 4} ${cx - 5},${cy + 2}" fill="#4f412f" stroke="#6f552d" stroke-width="0.5"/>`
-        );
-      } else if (count >= 3 && count <= 5) {
-        // Level 2: Cruiser Alien (active glowing ship)
-        fleetElements.push(
-          `<polygon points="${cx - 5},${cy - 3} ${cx},${cy - 6} ${cx + 5},${cy - 3} ${cx + 6},${cy + 3} ${cx + 3},${cy + 5} ${cx - 3},${cy + 5} ${cx - 6},${cy + 3}" fill="#6f552d" stroke="#a27c35" stroke-width="0.8"/>` +
-          `<circle cx="${cx}" cy="${cy}" r="1.5" fill="#f0c85a"/>`
-        );
-      } else if (count >= 6 && count <= 8) {
-        // Level 3: Heavy Alien (combat impact / critical hits)
-        fleetElements.push(
-          `<polygon points="${cx - 6},${cy - 4} ${cx},${cy - 7} ${cx + 6},${cy - 4} ${cx + 6},${cy + 4} ${cx + 2},${cy + 6} ${cx - 2},${cy + 6} ${cx - 6},${cy + 4}" fill="#a27c35" stroke="#f0c85a" stroke-width="0.9"/>` +
-          `<circle cx="${cx}" cy="${cy}" r="2" fill="#5e8f45"/>` +
-          `<line x1="${cx - 7}" y1="${cy}" x2="${cx + 7}" y2="${cy}" stroke="#f0c85a" stroke-width="0.5" opacity="0.8"/>`
-        );
-      } else if (count >= 9) {
-        // Level 4: Destroyed / Exploding Alien (green energy burst)
-        fleetElements.push(
-          `<circle cx="${cx}" cy="${cy}" r="5" fill="#5e8f45" opacity="0.9"/>` +
-          `<circle cx="${cx}" cy="${cy}" r="2.5" fill="#e8e0d0"/>` +
-          `<line x1="${cx - 7}" y1="${cy - 7}" x2="${cx + 7}" y2="${cy + 7}" stroke="#5e8f45" stroke-width="0.8"/>` +
-          `<line x1="${cx - 7}" y1="${cy + 7}" x2="${cx + 7}" y2="${cy - 7}" stroke="#f0c85a" stroke-width="0.8"/>`
-        );
-      }
-    });
-  });
+      return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${cellSize}" height="${cellSize}" rx="2.5" fill="${fill}"/>`;
+    }).join('\n    ');
+  }).join('\n    ');
 
   const monthsSvg = monthLabels.map(m =>
-    `<text x="${m.x.toFixed(1)}" y="62" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">${m.name}</text>`
+    `<text x="${m.x.toFixed(1)}" y="60" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">${m.name}</text>`
   ).join('\n  ');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-  <defs>
-    <radialGradient id="space-bg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#1d1712"/><stop offset="100%" stop-color="#0c0907"/></radialGradient>
-    <linearGradient id="laser-beam" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#f0c85a" stop-opacity="0.9"/><stop offset="50%" stop-color="#168b78" stop-opacity="0.8"/><stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/></linearGradient>
-  </defs>
-
   <rect width="${width}" height="${height}" fill="#17130f" rx="14"/>
-  <rect width="${width}" height="${height}" fill="url(#space-bg)" rx="14"/>
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1.2" stroke-opacity="0.85"/>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
   
-  <!-- Arcade HUD Header -->
-  <text x="${PAD}" y="32" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION COMBAT SIGNAL</text>
-  <text x="${PAD}" y="50" font-family="Georgia,'Times New Roman',serif" font-size="18" font-weight="600" fill="#e8e0d0">Starship Combat Log // Real GitHub Telemetry</text>
-  <text x="870" y="34" font-family="'Courier New',monospace" font-size="9.5" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="700">COMBAT POWER: ${totalCount} CONTRIBUTIONS</text>
-  <line x1="${PAD}" y1="56" x2="870" y2="56" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+  <text x="${PAD}" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">CONTRIBUTION COMBAT SIGNAL (STATIC FALLBACK)</text>
+  <text x="${PAD}" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">GitHub activity calendar</text>
+  <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#f0c85a" letter-spacing="1.5" text-anchor="end" font-weight="600">${totalCount} contributions in past year</text>
+  <line x1="${PAD}" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
 
-  <!-- Month Labels -->
   ${monthsSvg}
 
-  <!-- Weekday Labels -->
-  <text x="24" y="83"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
-  <text x="24" y="108" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
-  <text x="24" y="133" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
+  <text x="26" y="82"  font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Mon</text>
+  <text x="26" y="113" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Wed</text>
+  <text x="26" y="144" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Fri</text>
 
-  <!-- 364 Real Days mapped into Alien Fleet Battle Grid -->
-  <g>
-    ${fleetElements.join('\n    ')}
-  </g>
+  ${cellsSvg}
 
-  <!-- Laser Beam Cannon Blast (Upward from Player Starship) -->
-  <line x1="450" y1="210" x2="450" y2="70" stroke="url(#laser-beam)" stroke-width="2" stroke-dasharray="6,3"/>
-  <circle cx="450" cy="115" r="8" fill="#f0c85a" opacity="0.3"/>
-  <circle cx="450" cy="115" r="3" fill="#e8e0d0"/>
+  <text x="730" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Less</text>
+  <rect x="758" y="188" width="10" height="10" rx="2" fill="#231d17"/>
+  <rect x="772" y="188" width="10" height="10" rx="2" fill="#4f412f"/>
+  <rect x="786" y="188" width="10" height="10" rx="2" fill="#6f552d"/>
+  <rect x="800" y="188" width="10" height="10" rx="2" fill="#a27c35"/>
+  <rect x="814" y="188" width="10" height="10" rx="2" fill="#5e8f45"/>
+  <text x="832" y="196" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">More</text>
 
-  <!-- Player Starship (Bottom Center) -->
-  <g transform="translate(450, 216)">
-    <!-- Engine Glow -->
-    <polygon points="-4,10 0,18 4,10" fill="#5e8f45" opacity="0.85"/>
-    <polygon points="-2,10 0,15 2,10" fill="#f0c85a" opacity="0.9"/>
-    <!-- Hull -->
-    <path d="M 0,-18 L -14,8 L -8,8 L -6,12 L 6,12 L 8,8 L 14,8 Z" fill="#d6a84a" stroke="#f0c85a" stroke-width="0.8"/>
-    <!-- Cockpit -->
-    <ellipse cx="0" cy="-4" rx="3.5" ry="6" fill="#168b78" stroke="#e8e0d0" stroke-width="0.5"/>
-    <!-- Wings detail -->
-    <line x1="-14" y1="8" x2="-8" y2="-4" stroke="#6b5433" stroke-width="0.6"/>
-    <line x1="14" y1="8" x2="8" y2="-4" stroke="#6b5433" stroke-width="0.6"/>
-  </g>
-  <text x="450" y="244" font-family="'Courier New',monospace" font-size="7.5" fill="#f0c85a" text-anchor="middle" letter-spacing="2" font-weight="600">RENAISSANCE STARSHIP FLAGSHIP</text>
-
-  <!-- Arcade Legend (Bottom Right) -->
-  <g transform="translate(620, 230)">
-    <text x="0" y="10" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">STATUS:</text>
-    
-    <rect x="52" y="3" width="7" height="7" rx="1.5" fill="#1b1612"/>
-    <text x="63" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">0 Space</text>
-
-    <polygon points="104,3 108,1 112,3 113,7 103,7" fill="#4f412f"/>
-    <text x="116" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">1-2 Patrol</text>
-
-    <polygon points="164,3 168,1 172,3 173,7 163,7" fill="#6f552d" stroke="#a27c35" stroke-width="0.5"/>
-    <text x="176" y="10" font-family="'Courier New',monospace" font-size="7" fill="#6f6557">3-5 Engaged</text>
-
-    <circle cx="224" cy="6" r="3.5" fill="#5e8f45"/>
-    <text x="231" y="10" font-family="'Courier New',monospace" font-size="7" fill="#5e8f45" font-weight="600">9+ Destroyed</text>
-  </g>
-
-  <text x="${PAD}" y="244" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.5" opacity="0.85">364 days converted into combat energy · pure vector telemetry</text>
+  <text x="${PAD}" y="196" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.5" opacity="0.8">Real contribution history · updated dynamically</text>
 </svg>`;
 }
 
@@ -632,13 +550,22 @@ async function main() {
   fs.writeFileSync(path.join(ASSETS_DIR, 'header.svg'),              genHeader(profile),                     'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'profile-signal.svg'),      genProfileSignal(profile, avatarBase64),'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'stats.svg'),               genStatsCard(profile, repos, contribTotal), 'utf8');
-  fs.writeFileSync(path.join(ASSETS_DIR, 'contribution-signal.svg'),genContributionSignal(contribData),   'utf8');
+  fs.writeFileSync(path.join(ASSETS_DIR, 'contribution-signal.svg'),genContributionSignalStatic(contribData),'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'skin-card.svg'),          genSkinCard(),                          'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'language-stack.svg'),      genLanguageStack(langs),                'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'projects.svg'),            genFeaturedProjects(featured),          'utf8');
   fs.writeFileSync(path.join(ASSETS_DIR, 'footer.svg'),              genFooter(),                            'utf8');
 
-  console.log('Assets successfully updated in:', ASSETS_DIR);
+  console.log('SVG assets written. Now generating animated GIF via python scripts/generate_gif.py...');
+  try {
+    const pyScript = path.resolve(__dirname, 'generate_gif.py');
+    const pyOutput = execSync(`python "${pyScript}"`, { encoding: 'utf8' });
+    console.log(pyOutput);
+  } catch (err) {
+    console.warn('GIF generation warning:', err.message);
+  }
+
+  console.log('All profile assets successfully updated!');
 }
 
 main().catch(err => {
