@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="130" viewBox="0 0 900 130">
+  <defs>
+    <radialGradient id="sk-green" cx="90%" cy="10%" r="35%">
+      <stop offset="0%" stop-color="#5e8f45" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#5e8f45" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sk-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#6b5433" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#d6a84a" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="top-rule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#d6a84a" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#d6a84a" stop-opacity="0.6"/>
+      <stop offset="80%"  stop-color="#d6a84a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d6a84a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="130" fill="#17130f" rx="14"/>
+  <rect width="900" height="130" fill="url(#sk-green)" rx="14"/>
+  <rect x="0.5" y="0.5" width="899" height="129" rx="13.5" fill="none" stroke="url(#sk-border)" stroke-width="1"/>
+  <!-- Top shimmer rule -->
+  <line x1="0" y1="1" x2="900" y2="1" stroke="url(#top-rule)" stroke-width="0.8"/>
+
+  <!-- Eyebrow -->
+  <text x="30" y="36" font-family="'Courier New', monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4" font-weight="600">SKIN TEMPLATE</text>
+
+  <!-- Divider dot -->
+  <circle cx="176" cy="32" r="2" fill="#6b5433" opacity="0.5"/>
+
+  <!-- Template name -->
+  <text x="30" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" fill="#e8e0d0" letter-spacing="-0.5">Renaissance</text>
+
+  <!-- Description -->
+  <text x="30" y="96" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#a89b86">Archive-grade developer profile with manuscript detail.</text>
+
+  <!-- Note / attribution -->
+  <text x="30" y="118" font-family="'Courier New', monospace" font-size="8" fill="#6b5433" letter-spacing="1.5" opacity="0.8">Designed for @tusharcancodehere · inspired by GitSkins · powered by the public GitHub API</text>
+
+  <!-- Right side badge -->
+  <rect x="800" y="44" width="76" height="26" rx="13" fill="#f5f0e5"/>
+  <text x="838" y="61" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="600" fill="#191611" text-anchor="middle">✦ Share</text>
+</svg>

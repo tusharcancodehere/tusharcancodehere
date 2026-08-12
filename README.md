@@ -1,434 +1,196 @@
-<div align="center">
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=320&color=gradient&customColorList=12,20,24,30&text=Tushar%20Verma&fontColor=ffffff&fontSize=60&animation=fadeIn&fontAlignY=38&desc=AI%20Developer%20•%20Computer%20Vision%20•%20MERN%20Stack%20•%20Backend%20Engineer&descAlignY=62"/>
-
-<br>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3500&pause=1200&color=58A6FF&center=true&vCenter=true&width=950&lines=Artificial+Intelligence;Computer+Vision;Full+Stack+Developer;Backend+Engineer;Linux+Enthusiast;Docker+%7C+Open+Source;Always+Building+Something+New"/>
-
-<br><br>
-
-<a href="https://github.com/tusharcancodehere">
-<img src="https://komarev.com/ghpvc/?username=tusharcancodehere&style=for-the-badge&color=blue"/>
-</a>
-
-<a href="https://github.com/tusharcancodehere?tab=followers">
-<img src="https://img.shields.io/github/followers/tusharcancodehere?style=for-the-badge"/>
-</a>
-
-<a href="https://github.com/tusharcancodehere">
-<img src="https://img.shields.io/github/stars/tusharcancodehere?affiliations=OWNER&style=for-the-badge"/>
-</a>
-
-</div>
-
----
-
-# 👨‍💻 About Me
-
-```python
-class TusharVerma:
-
-    def __init__(self):
-
-        self.name = "Tushar Verma"
-
-        self.location = "India 🇮🇳"
-
-        self.role = [
-            "AI Developer",
-            "Computer Vision Developer",
-            "MERN Stack Developer",
-            "Backend Developer"
-        ]
-
-        self.currently_learning = [
-            "Artificial Intelligence",
-            "Machine Learning",
-            "Deep Learning",
-            "Distributed Systems",
-            "Cloud Computing",
-            "DevOps"
-        ]
-
-        self.interests = [
-            "Open Source",
-            "Backend Architecture",
-            "Linux",
-            "Automation",
-            "Computer Vision"
-        ]
-
-        self.goal = "Build software that solves real-world problems."
-
-    def life(self):
-        while True:
-            Build()
-            Break()
-            Learn()
-            Improve()
-```
-
----
-
-# 🚀 Current Focus
-
-- 🤖 Artificial Intelligence
-- 👁️ Computer Vision
-- 🌐 MERN Stack
-- ⚛️ React Ecosystem
-- ⚙️ Backend Development
-- 🐳 Docker
-- 🐧 Linux
-- 🌍 Open Source
-- ☁️ Cloud Technologies
-
----
-
-# 🚀 Featured Projects
-
-## 🎥 CAMZ
-
-> Real-time Computer Vision Dashboard with AI-powered processing.
-
-**Tech Stack**
-
-`Python` • `OpenCV` • `Flask` • `React`
-
----
-
-## 🤖 AI Voice Assistant
-
-Voice Assistant powered by Gemini API with Speech Recognition.
-
-**Tech Stack**
-
-`Python` • `Gemini API` • `Whisper`
-
----
-
-## 🌐 MERN Full Stack Application
-
-Authentication, REST APIs, Database Integration and Responsive UI.
-
-**Tech Stack**
-
-`MongoDB` • `Express` • `React` • `Node.js`
-
----
-
-## 🍓 Raspberry Pi Home Server
-
-Personal self-hosted Linux server with Docker containers.
-
-**Tech Stack**
-
-`Docker` • `Linux` • `Raspberry Pi`
-
----
-
-# 💻 Tech Stack
-
-### Languages
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css,bash"/>
-
-</p>
-
-### Frontend
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind"/>
-
-</p>
-
-### Backend
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,flask,fastapi"/>
-
-</p>
-
-### AI & Data Science
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=opencv"/>
-
-<img src="https://go-skill-icons.vercel.app/api/icons?i=numpy,pandas"/>
-
-</p>
-
-### Database
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=mongodb,firebase"/>
-
-</p>
-
-### DevOps
-
-<p>
-
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,postman"/>
-
-</p>
-
----
-
-# 📊 GitHub Analytics
-
+<!--
+  ╔══════════════════════════════════════════════════════════════════════╗
+  ║  tusharcancodehere / tusharcancodehere                              ║
+  ║  GitHub Profile README — Renaissance · GitSkins                     ║
+  ║                                                                      ║
+  ║  All displayed data is sourced from the public GitHub API.          ║
+  ║  Run  node scripts/update-profile.js  to regenerate SVG assets.    ║
+  ╚══════════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- ── RENAISSANCE HEADER ─────────────────────────────────────────────── -->
 <p align="center">
+  <img
+    src="assets/header.svg"
+    alt="tusharcancodehere — GitSkins Renaissance profile header"
+    width="900"
+  />
+</p>
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github"/>
+---
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true&langs_count=8"/>
-
+<!-- ── PROFILE INTRODUCTION ──────────────────────────────────────────── -->
+<p align="center">
+  <a href="https://github.com/tusharcancodehere">
+    <img
+      src="https://avatars.githubusercontent.com/u/236418225?v=4"
+      width="120"
+      height="120"
+      alt="Tushar avatar"
+      style="border-radius: 50%;"
+    />
+  </a>
 </p>
 
 <p align="center">
-
-<img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark&hide_border=true"/>
-
-</p>
-
----
-# 📈 Contribution Graph
-
-<p align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
-
-</p>
-
----
-
-# 🏆 GitHub Trophies
-
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=tusharcancodehere&theme=algolia&column=4&margin-w=15&margin-h=15"/>
-
-</p>
-
----
-
-# 📊 GitHub Summary
-
-<p align="center">
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tusharcancodehere&theme=github_dark"/>
-
+  <strong><samp>Tushar</samp></strong>
+  &nbsp;·&nbsp;
+  <code>@tusharcancodehere</code>
+  &nbsp;·&nbsp;
+  <samp>New Delhi, India</samp>
 </p>
 
 <p align="center">
+  <a href="https://github.com/tusharcancodehere">
+    <img src="https://img.shields.io/badge/GitHub-tusharcancodehere-d6a84a?style=flat-square&logo=github&logoColor=e8e0d0&labelColor=17130f&color=6b5433" alt="GitHub"/>
+  </a>
+  &nbsp;
+  <a href="https://tusharcancodehere.github.io/Portfolio_Website/">
+    <img src="https://img.shields.io/badge/Portfolio-Website-d6a84a?style=flat-square&logo=firefox&logoColor=e8e0d0&labelColor=17130f&color=6b5433" alt="Portfolio"/>
+  </a>
+</p>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+---
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+<!-- ── GITHUB STATISTICS ──────────────────────────────────────────────── -->
 
+<p align="center">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&hide_border=true&bg_color=0d0b09&title_color=D6A84A&text_color=E8E0D0&icon_color=5E8F45&ring_color=6B5433&count_private=false"
+    alt="Tushar's GitHub stats"
+    width="460"
+  />
+  &nbsp;
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&hide_border=true&bg_color=0d0b09&title_color=D6A84A&text_color=E8E0D0&langs_count=6"
+    alt="Top languages"
+    width="340"
+  />
+</p>
+
+---
+
+<!-- ── PROFILE SIGNAL ─────────────────────────────────────────────────── -->
+<p align="center">
+  <img
+    src="assets/profile-signal.svg"
+    alt="Profile Signal — Tushar · @tusharcancodehere · live GitHub card"
+    width="900"
+  />
+</p>
+
+---
+
+<!-- ── RENAISSANCE SKIN CARD ─────────────────────────────────────────── -->
+<p align="center">
+  <img
+    src="assets/skin-card.svg"
+    alt="Renaissance skin template card — GitSkins"
+    width="900"
+  />
+</p>
+
+---
+
+<!-- ── LANGUAGE STACK ─────────────────────────────────────────────────── -->
+<p align="center">
+  <img
+    src="assets/language-stack.svg"
+    alt="Language stack — repository-weighted technologies"
+    width="900"
+  />
+</p>
+
+---
+
+<!-- ── CONTRIBUTION SIGNAL ───────────────────────────────────────────── -->
+
+<details>
+<summary><samp>◈ CONTRIBUTION SIGNAL — GitHub activity calendar</samp></summary>
+
+<br/>
+
+<p align="center">
+  <img
+    src="https://ghchart.rshah.org/D6A84A/tusharcancodehere"
+    alt="tusharcancodehere GitHub contribution graph"
+    width="860"
+  />
 </p>
 
 <p align="center">
+  <img
+    src="https://github-readme-streak-stats.herokuapp.com/?user=tusharcancodehere&hide_border=true&background=0d0b09&ring=D6A84A&fire=F0C85A&currStreakLabel=E8E0D0&sideLabels=A89B86&sideNums=E8E0D0&dates=6F6557&stroke=6B5433"
+    alt="Contribution streak"
+    width="600"
+  />
+</p>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tusharcancodehere&theme=github_dark" height="180"/>
+</details>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=tusharcancodehere&theme=github_dark&utcOffset=5.5" height="180"/>
+---
 
+<!-- ── FEATURED PROJECTS ──────────────────────────────────────────────── -->
+<p align="center">
+  <img
+    src="assets/projects.svg"
+    alt="Featured projects — CCTV_PI · Jarvis · CamZ"
+    width="900"
+  />
+</p>
+
+<!-- Individual repo links (text-accessible, screen-reader friendly) -->
+<p align="center">
+  <a href="https://github.com/tusharcancodehere/CCTV_PI">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CCTV_PI&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="CCTV_PI" width="280"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/tusharcancodehere/Jarvis">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=Jarvis&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="Jarvis" width="280"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/tusharcancodehere/CamZ">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CamZ&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="CamZ" width="280"/>
+  </a>
 </p>
 
 ---
 
-# 📌 Featured Repositories
+<!-- ── CONNECT ────────────────────────────────────────────────────────── -->
 
 <p align="center">
-
-<a href="https://github.com/tusharcancodehere/CAMZ">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CAMZ&theme=github_dark&hide_border=true"/>
-
-</a>
-
-<a href="https://github.com/tusharcancodehere">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=AI-Voice-Assistant&theme=github_dark&hide_border=true"/>
-
-</a>
-
+  <samp>⌘ &nbsp; Connect</samp>
 </p>
 
 <p align="center">
-
-<a href="https://github.com/tusharcancodehere">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=MERN-FullStack&theme=github_dark&hide_border=true"/>
-
-</a>
-
-<a href="https://github.com/tusharcancodehere">
-
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=RaspberryPi-HomeServer&theme=github_dark&hide_border=true"/>
-
-</a>
-
+  <a href="https://github.com/tusharcancodehere">
+    <img src="https://img.shields.io/badge/-GitHub-17130f?style=for-the-badge&logo=github&logoColor=d6a84a&labelColor=211b15" alt="GitHub"/>
+  </a>
+  &nbsp;
+  <a href="https://tusharcancodehere.github.io/Portfolio_Website/">
+    <img src="https://img.shields.io/badge/-Portfolio-17130f?style=for-the-badge&logo=firefox-browser&logoColor=d6a84a&labelColor=211b15" alt="Portfolio"/>
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/tusharverma-/">
+    <img src="https://img.shields.io/badge/-LinkedIn-17130f?style=for-the-badge&logo=linkedin&logoColor=d6a84a&labelColor=211b15" alt="LinkedIn"/>
+  </a>
 </p>
 
----
-
-# 🏅 Achievements
-
-- 🤖 AI Application Development
-- 👁️ Computer Vision Systems
-- 🌐 MERN Stack Development
-- ⚙️ Backend Engineering
-- 🐳 Docker & Linux
-- 🌍 Open Source Contributions
-- 🚀 Continuous Learning
-- 💻 Building Real-World Projects
-
----
-
-# 📚 Currently Learning
-
-```text
-████████████████████░░░░ 80%
-
-✓ Artificial Intelligence
-
-✓ Computer Vision
-
-✓ MERN Stack
-
-✓ Backend Development
-
-✓ Docker
-
-✓ Linux
-
-◉ Distributed Systems
-
-◉ DevOps
-
-◉ Cloud Computing
-```
-
----
-
-# ⚡ Developer Mindset
-
-```text
-while(alive){
-
-    Learn();
-
-    Build();
-
-    Fail();
-
-    Improve();
-
-    Repeat();
-
-}
-```
-
----
-
-# 💬 Random Dev Quote
-
+<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
 <p align="center">
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=github_dark"/>
-
+  <img
+    src="assets/footer.svg"
+    alt="Renaissance interface · live public GitHub data"
+    width="900"
+  />
 </p>
 
----
-# 🌐 Connect With Me
-
-<p align="center">
-
-<a href="https://github.com/tusharcancodehere" target="_blank">
-<img src="https://skillicons.dev/icons?i=github" height="55" />
-</a>&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="https://linkedin.com/in/tusharverma-" target="_blank">
-<img src="https://skillicons.dev/icons?i=linkedin" height="55" />
-</a>&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="https://instagram.com/someone_was__here_" target="_blank">
-<img src="https://skillicons.dev/icons?i=instagram" height="55" />
-</a>&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href="mailto:thetusharverma2505@gmail.com">
-<img src="https://skillicons.dev/icons?i=gmail" height="55" />
-</a>
-
-</p>
-
----
-
-# 🎯 2026 Goals
-
-- 🚀 Build Production Ready AI Applications
-- 🤖 Master Computer Vision
-- 🌐 Become an Advanced MERN Developer
-- ⚙️ Learn Scalable Backend Architecture
-- 🐳 Master Docker & Containers
-- ☁️ Learn Cloud Deployment
-- 🌍 Contribute More to Open Source
-- 📚 Read More Engineering Books
-
----
-
-# ⚙️ Tech I Enjoy Working With
-
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=python"/>
-
-<img src="https://skillicons.dev/icons?i=react"/>
-
-<img src="https://skillicons.dev/icons?i=nodejs"/>
-
-<img src="https://skillicons.dev/icons?i=express"/>
-
-<img src="https://skillicons.dev/icons?i=mongodb"/>
-
-<img src="https://skillicons.dev/icons?i=docker"/>
-
-<img src="https://skillicons.dev/icons?i=linux"/>
-
-<img src="https://skillicons.dev/icons?i=git"/>
-
-<img src="https://skillicons.dev/icons?i=github"/>
-
-<img src="https://skillicons.dev/icons?i=vscode"/>
-
-</p>
-
----
-
-# 💡 Philosophy
-
-> **"Build things that solve real problems."**
-
-I enjoy transforming ideas into software, learning from every project, and continuously improving my engineering skills.
-
----
-
-<div align="center">
-
-## ⚡ Thanks for Visiting!
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&center=true&vCenter=true&width=650&lines=Thanks+for+visiting!;Happy+Coding!;See+you+again!;⭐+Don't+forget+to+star+my+repositories!"/>
-
-<br><br>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=180&color=gradient&customColorList=12,20,24,30"/>
-
-</div>
+<!--
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  To update dynamic assets, run:                                     │
+  │    node scripts/update-profile.js                                   │
+  │  Then commit + push the assets/ directory.                          │
+  │                                                                      │
+  │  No token, no npm install, no secrets are embedded here.            │
+  └─────────────────────────────────────────────────────────────────────┘
+-->

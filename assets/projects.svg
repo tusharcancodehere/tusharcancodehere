@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="318" viewBox="0 0 900 318">
+  <rect width="900" height="318" fill="#17130f" rx="14"/>
+  <rect x="0.5" y="0.5" width="899" height="317" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
+  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4">FEATURED PROJECTS</text>
+  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repositories worth opening</text>
+  <line x1="30" y1="64" x2="870" y2="64" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+  
+  <rect x="20" y="68" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="36" y="90" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="280" y="90" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="36" y="116" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">tusharcancodehere</text>
+  <text x="36" y="136" font-family="Georgia,serif" font-size="11" fill="#a89b86">No description provided.</text>
+  <circle cx="44" cy="240" r="4" fill="#3572a5"/>
+  <text x="56" y="244" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="98" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="142" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="36" y="264" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 6 days ago</text>
+  <text x="36" y="294" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/tusharcancodehere</text>
+  <rect x="306" y="68" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="322" y="90" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="566" y="90" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="322" y="116" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">CamZ</text>
+  <text x="322" y="136" font-family="Georgia,serif" font-size="11" fill="#a89b86">No description provided.</text>
+  <circle cx="330" cy="240" r="4" fill="#3572a5"/>
+  <text x="342" y="244" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="384" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="428" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="322" y="264" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 14 days ago</text>
+  <text x="322" y="294" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/CamZ</text>
+  <rect x="592" y="68" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="608" y="90" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="852" y="90" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="608" y="116" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">CCTV_PI</text>
+  <text x="608" y="136" font-family="Georgia,serif" font-size="11" fill="#a89b86">Real-time OpenCV + Flask camera</text>
+  <text x="608" y="152" font-family="Georgia,serif" font-size="11" fill="#a89b86">dashboard for Raspberry Pi & Linux.</text>
+  <text x="608" y="168" font-family="Georgia,serif" font-size="11" fill="#a89b86">Streams live…</text>
+  <circle cx="616" cy="240" r="4" fill="#3572a5"/>
+  <text x="628" y="244" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="670" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="714" y="244" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="608" y="264" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 1 months ago</text>
+  <text x="608" y="294" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/CCTV_PI</text>
+  <rect x="20" y="318" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="36" y="340" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="280" y="340" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="36" y="366" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">SELF_BOT</text>
+  <text x="36" y="386" font-family="Georgia,serif" font-size="11" fill="#a89b86">No description provided.</text>
+  <circle cx="44" cy="490" r="4" fill="#3572a5"/>
+  <text x="56" y="494" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="98" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="142" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="36" y="514" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 1 months ago</text>
+  <text x="36" y="544" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/SELF_BOT</text>
+  <rect x="306" y="318" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="322" y="340" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="566" y="340" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="322" y="366" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">App_Dev</text>
+  <text x="322" y="386" font-family="Georgia,serif" font-size="11" fill="#a89b86">No description provided.</text>
+  <circle cx="330" cy="490" r="4" fill="#3572a5"/>
+  <text x="342" y="494" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="384" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="428" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="322" y="514" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 1 months ago</text>
+  <text x="322" y="544" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/App_Dev</text>
+  <rect x="592" y="318" width="276" height="240" rx="11" fill="#0e0b08" stroke="#6b5433" stroke-width="0.8" stroke-opacity="0.7"/>
+  <text x="608" y="340" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557" letter-spacing="3">REPOSITORY</text>
+  <text x="852" y="340" font-family="Georgia,serif" font-size="13" fill="#d6a84a" text-anchor="end">↗</text>
+  <text x="608" y="366" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#e8e0d0">Digital_Butler</text>
+  <text x="608" y="386" font-family="Georgia,serif" font-size="11" fill="#a89b86">No description provided.</text>
+  <circle cx="616" cy="490" r="4" fill="#3572a5"/>
+  <text x="628" y="494" font-family="'Courier New',monospace" font-size="10" fill="#a89b86">Python</text>
+  <text x="670" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">★ 0</text>
+  <text x="714" y="494" font-family="'Courier New',monospace" font-size="10" fill="#f0c85a">⑂ 0</text>
+  <text x="608" y="514" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">Updated 1 months ago</text>
+  <text x="608" y="544" font-family="'Courier New',monospace" font-size="7.5" fill="#d6a84a" letter-spacing="0.5">github.com/tusharcancodehere/Digital_Butler</text>
+</svg>

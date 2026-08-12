@@ -1,0 +1,12 @@
+# Environment variables (never commit tokens)
+.env
+.env.local
+
+# macOS metadata
+.DS_Store
+
+# Node (only if running the update script locally)
+node_modules/
+
+# Logs
+*.log

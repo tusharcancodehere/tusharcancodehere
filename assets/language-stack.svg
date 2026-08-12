@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250">
+  <rect width="900" height="250" fill="#17130f" rx="14"/>
+  <rect x="0.5" y="0.5" width="899" height="249" rx="13.5" fill="none" stroke="#6b5433" stroke-width="1" stroke-opacity="0.8"/>
+  <text x="30" y="34" font-family="'Courier New',monospace" font-size="8.5" fill="#d6a84a" letter-spacing="4">LANGUAGE &amp; TECH STACK</text>
+  <text x="30" y="54" font-family="Georgia,'Times New Roman',serif" font-size="20" font-weight="600" fill="#e8e0d0">Repository-weighted technologies</text>
+  <text x="870" y="34" font-family="'Courier New',monospace" font-size="9" fill="#d6a84a" letter-spacing="2" text-anchor="end" opacity="0.8">› stack.scan_</text>
+  <line x1="30" y1="65" x2="870" y2="65" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.5"/>
+  
+  <!-- PROGRAMMING LANGUAGES SECTION -->
+  
+  <!-- Programming Language: Python -->
+  <circle cx="46" cy="88" r="5" fill="#3572a5"/>
+  <text x="60" y="92" font-family="'Courier New',monospace" font-size="11.5" fill="#e8e0d0" font-weight="600">Python</text>
+  <text x="60" y="104" font-family="'Courier New',monospace" font-size="8" fill="#6f6557">6 repos</text>
+  <rect x="230" y="80" width="600" height="11" rx="5.5" fill="#0c0a08" stroke="#6b5433" stroke-width="0.5" stroke-opacity="0.4"/>
+  <rect x="230" y="80" width="600" height="11" rx="5.5" fill="#3572a5CC"/>
+  <text x="844" y="91" font-family="'Courier New',monospace" font-size="11" fill="#f0c85a" font-weight="600" text-anchor="end">100%</text>
+
+  <!-- SEPARATOR -->
+  <line x1="30" y1="140" x2="870" y2="140" stroke="#6b5433" stroke-width="0.4" stroke-opacity="0.35"/>
+
+  <!-- FRAMEWORKS, TOOLS & PLATFORMS SECTION (Extracted from project specs/descriptions) -->
+  <text x="30" y="160" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="3" opacity="0.85">FRAMEWORKS, TOOLS &amp; PLATFORMS — FROM REPOSITORY DESCRIPTIONS</text>
+  
+  <rect x="30" y="174" width="180" height="42" rx="6" fill="#0e0b08" stroke="#6b5433" stroke-width="0.6" opacity="0.9"/>
+  <circle cx="46" cy="195" r="4" fill="#5e8f45"/>
+  <text x="58" y="191" font-family="'Courier New',monospace" font-size="11" fill="#e8e0d0" font-weight="600">OpenCV</text>
+  <text x="58" y="204" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">CamZ · CCTV_PI · Jarvis</text>
+
+  <rect x="224" y="174" width="180" height="42" rx="6" fill="#0e0b08" stroke="#6b5433" stroke-width="0.6" opacity="0.9"/>
+  <circle cx="240" cy="195" r="4" fill="#168b78"/>
+  <text x="252" y="191" font-family="'Courier New',monospace" font-size="11" fill="#e8e0d0" font-weight="600">Flask</text>
+  <text x="252" y="204" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">CCTV_PI</text>
+
+  <rect x="418" y="174" width="180" height="42" rx="6" fill="#0e0b08" stroke="#6b5433" stroke-width="0.6" opacity="0.9"/>
+  <circle cx="434" cy="195" r="4" fill="#d6a84a"/>
+  <text x="446" y="191" font-family="'Courier New',monospace" font-size="11" fill="#e8e0d0" font-weight="600">OpenAI</text>
+  <text x="446" y="204" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">Jarvis</text>
+
+  <rect x="612" y="174" width="258" height="42" rx="6" fill="#0e0b08" stroke="#6b5433" stroke-width="0.6" opacity="0.9"/>
+  <circle cx="628" cy="195" r="4" fill="#9b1748"/>
+  <text x="640" y="191" font-family="'Courier New',monospace" font-size="11" fill="#e8e0d0" font-weight="600">Raspberry Pi &amp; Linux</text>
+  <text x="640" y="204" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">CCTV_PI (Edge Devices)</text>
+
+  <text x="30" y="238" font-family="'Courier New',monospace" font-size="7.5" fill="#6b5433" letter-spacing="1.5" opacity="0.75">Data sourced from public GitHub repository metadata · languages calculated by repo count</text>
+</svg>
