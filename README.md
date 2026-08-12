@@ -3,12 +3,12 @@
   ║  tusharcancodehere / tusharcancodehere                              ║
   ║  GitHub Profile README — Renaissance · GitSkins                     ║
   ║                                                                      ║
-  ║  All displayed data is sourced from the public GitHub API.          ║
+  ║  All displayed data is sourced from public GitHub API.               ║
   ║  Run  node scripts/update-profile.js  to regenerate SVG assets.    ║
   ╚══════════════════════════════════════════════════════════════════════╝
 -->
 
-<!-- ── RENAISSANCE HEADER ─────────────────────────────────────────────── -->
+<!-- ── 1. RENAISSANCE HEADER ─────────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/header.svg"
@@ -19,22 +19,24 @@
 
 ---
 
-<!-- ── PROFILE INTRODUCTION ──────────────────────────────────────────── -->
+<!-- ── 2. PROFILE INTRODUCTION & IDENTITY ────────────────────────────── -->
 <p align="center">
   <a href="https://github.com/tusharcancodehere">
     <img
       src="https://avatars.githubusercontent.com/u/236418225?v=4"
-      width="120"
-      height="120"
+      width="130"
+      height="130"
       alt="Tushar avatar"
       style="border-radius: 50%;"
     />
   </a>
 </p>
 
+<h1 align="center">
+  Tushar
+</h1>
+
 <p align="center">
-  <strong><samp>Tushar</samp></strong>
-  &nbsp;·&nbsp;
   <code>@tusharcancodehere</code>
   &nbsp;·&nbsp;
   <samp>New Delhi, India</samp>
@@ -52,25 +54,18 @@
 
 ---
 
-<!-- ── GITHUB STATISTICS ──────────────────────────────────────────────── -->
-
+<!-- ── 3. GITHUB STATISTICS (RENAISSANCE PLAQUES) ─────────────────────── -->
 <p align="center">
   <img
-    src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&hide_border=true&bg_color=0d0b09&title_color=D6A84A&text_color=E8E0D0&icon_color=5E8F45&ring_color=6B5433&count_private=false"
-    alt="Tushar's GitHub stats"
-    width="460"
-  />
-  &nbsp;
-  <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&hide_border=true&bg_color=0d0b09&title_color=D6A84A&text_color=E8E0D0&langs_count=6"
-    alt="Top languages"
-    width="340"
+    src="assets/stats.svg"
+    alt="Tushar's GitHub Statistics — Stars, Repositories, Followers, Contributions"
+    width="900"
   />
 </p>
 
 ---
 
-<!-- ── PROFILE SIGNAL ─────────────────────────────────────────────────── -->
+<!-- ── 4. PROFILE SIGNAL ──────────────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/profile-signal.svg"
@@ -81,7 +76,7 @@
 
 ---
 
-<!-- ── RENAISSANCE SKIN CARD ─────────────────────────────────────────── -->
+<!-- ── 5. RENAISSANCE SKIN CARD ──────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/skin-card.svg"
@@ -92,72 +87,55 @@
 
 ---
 
-<!-- ── LANGUAGE STACK ─────────────────────────────────────────────────── -->
+<!-- ── 6. LANGUAGE STACK ──────────────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/language-stack.svg"
-    alt="Language stack — repository-weighted technologies"
+    alt="Language & Tech Stack — Python, OpenCV, Flask, OpenAI, Raspberry Pi"
     width="900"
   />
 </p>
 
 ---
 
-<!-- ── CONTRIBUTION SIGNAL ───────────────────────────────────────────── -->
-
-<details>
-<summary><samp>◈ CONTRIBUTION SIGNAL — GitHub activity calendar</samp></summary>
-
-<br/>
-
+<!-- ── 7. CONTRIBUTION SIGNAL ────────────────────────────────────────── -->
 <p align="center">
   <img
-    src="https://ghchart.rshah.org/D6A84A/tusharcancodehere"
-    alt="tusharcancodehere GitHub contribution graph"
-    width="860"
+    src="assets/contribution-signal.svg"
+    alt="Contribution Signal — GitHub Activity Calendar"
+    width="900"
   />
 </p>
-
-<p align="center">
-  <img
-    src="https://github-readme-streak-stats.herokuapp.com/?user=tusharcancodehere&hide_border=true&background=0d0b09&ring=D6A84A&fire=F0C85A&currStreakLabel=E8E0D0&sideLabels=A89B86&sideNums=E8E0D0&dates=6F6557&stroke=6B5433"
-    alt="Contribution streak"
-    width="600"
-  />
-</p>
-
-</details>
 
 ---
 
-<!-- ── FEATURED PROJECTS ──────────────────────────────────────────────── -->
+<!-- ── 8. FEATURED PROJECTS ───────────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/projects.svg"
-    alt="Featured projects — CCTV_PI · Jarvis · CamZ"
+    alt="Featured Projects — CCTV_PI, Jarvis, CamZ"
     width="900"
   />
 </p>
 
-<!-- Individual repo links (text-accessible, screen-reader friendly) -->
+<!-- Clickable repository links -->
 <p align="center">
   <a href="https://github.com/tusharcancodehere/CCTV_PI">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CCTV_PI&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="CCTV_PI" width="280"/>
+    <img src="https://img.shields.io/badge/Repository-CCTV__PI-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CCTV_PI"/>
   </a>
-  &nbsp;
+  &nbsp;&nbsp;
   <a href="https://github.com/tusharcancodehere/Jarvis">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=Jarvis&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="Jarvis" width="280"/>
+    <img src="https://img.shields.io/badge/Repository-Jarvis-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="Jarvis"/>
   </a>
-  &nbsp;
+  &nbsp;&nbsp;
   <a href="https://github.com/tusharcancodehere/CamZ">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CamZ&bg_color=0d0b09&title_color=D6A84A&text_color=A89B86&icon_color=5E8F45&border_color=6B5433&hide_border=false" alt="CamZ" width="280"/>
+    <img src="https://img.shields.io/badge/Repository-CamZ-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CamZ"/>
   </a>
 </p>
 
 ---
 
-<!-- ── CONNECT ────────────────────────────────────────────────────────── -->
-
+<!-- ── 9. CONNECT ─────────────────────────────────────────────────────── -->
 <p align="center">
   <samp>⌘ &nbsp; Connect</samp>
 </p>
@@ -176,7 +154,7 @@
   </a>
 </p>
 
-<!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+<!-- ── 10. FOOTER ─────────────────────────────────────────────────────── -->
 <p align="center">
   <img
     src="assets/footer.svg"
@@ -184,13 +162,3 @@
     width="900"
   />
 </p>
-
-<!--
-  ┌─────────────────────────────────────────────────────────────────────┐
-  │  To update dynamic assets, run:                                     │
-  │    node scripts/update-profile.js                                   │
-  │  Then commit + push the assets/ directory.                          │
-  │                                                                      │
-  │  No token, no npm install, no secrets are embedded here.            │
-  └─────────────────────────────────────────────────────────────────────┘
--->

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
+  <defs>
+    <linearGradient id="st-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b5433" stop-opacity="0.85"/><stop offset="100%" stop-color="#d6a84a" stop-opacity="0.4"/></linearGradient>
+  </defs>
+
+  <!-- Stars Card -->
+  <rect x="0" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
+  <text x="20" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">STARS</text>
+  <text x="20" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">0</text>
+  <text x="20" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">stargazers count</text>
+  <text x="180" y="32" font-family="Georgia,serif" font-size="14" fill="#d6a84a" text-anchor="end">★</text>
+
+  <!-- Repositories Card -->
+  <rect x="228" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
+  <text x="248" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">REPOSITORIES</text>
+  <text x="248" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">9</text>
+  <text x="248" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">public repositories</text>
+  <text x="408" y="32" font-family="Georgia,serif" font-size="14" fill="#d6a84a" text-anchor="end">⬡</text>
+
+  <!-- Followers Card -->
+  <rect x="456" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
+  <text x="476" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">FOLLOWERS</text>
+  <text x="476" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">1</text>
+  <text x="476" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">community signal</text>
+  <text x="636" y="32" font-family="Georgia,serif" font-size="14" fill="#d6a84a" text-anchor="end">◈</text>
+
+  <!-- Contributions Card -->
+  <rect x="684" y="0" width="216" height="120" rx="12" fill="#17130f" stroke="url(#st-b)" stroke-width="1"/>
+  <text x="704" y="32" font-family="'Courier New',monospace" font-size="8" fill="#d6a84a" letter-spacing="2.5" font-weight="600">CONTRIBUTIONS</text>
+  <text x="704" y="78" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="700" fill="#f6ecd8">223</text>
+  <text x="704" y="100" font-family="'Courier New',monospace" font-size="7.5" fill="#6f6557">past year activity</text>
+  <text x="864" y="32" font-family="Georgia,serif" font-size="14" fill="#5e8f45" text-anchor="end">✦</text>
+</svg>
