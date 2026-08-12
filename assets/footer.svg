@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="60" viewBox="0 0 900 60">
-  <rect width="900" height="60" fill="#080705" rx="8"/>
-  <line x1="0" y1="1" x2="900" y2="1" stroke="#6b5433" stroke-width="0.8" opacity="0.6"/>
-  <text x="30" y="36" font-family="'Courier New',monospace" font-size="9" fill="#6b5433" letter-spacing="2">MISSION COMPLETE · live public GitHub telemetry</text>
-  <circle cx="450" cy="30" r="2" fill="#d6a84a" opacity="0.4"/>
-  <text x="870" y="36" font-family="'Courier New',monospace" font-size="9" fill="#6b5433" letter-spacing="2" text-anchor="end">github.com/tusharcancodehere</text>
-</svg>

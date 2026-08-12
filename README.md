@@ -1,183 +1,434 @@
-<!--
-  ╔══════════════════════════════════════════════════════════════════════╗
-  ║  tusharcancodehere / tusharcancodehere                              ║
-  ║  GitHub Profile README — Renaissance Starship · GitSkins             ║
-  ║                                                                      ║
-  ║  All displayed data is sourced from public GitHub API.               ║
-  ║  Run  node scripts/update-profile.js  to regenerate SVG & GIF.      ║
-  ╚══════════════════════════════════════════════════════════════════════╝
--->
+<div align="center">
 
-<!-- ── 1. RENAISSANCE HEADER ─────────────────────────────────────────── -->
-<p align="center">
-  <img
-    src="assets/header.svg"
-    alt="tusharcancodehere — GitSkins Renaissance profile header"
-    width="900"
-  />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=320&color=gradient&customColorList=12,20,24,30&text=Tushar%20Verma&fontColor=ffffff&fontSize=60&animation=fadeIn&fontAlignY=38&desc=AI%20Developer%20•%20Computer%20Vision%20•%20MERN%20Stack%20•%20Backend%20Engineer&descAlignY=62"/>
+
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3500&pause=1200&color=58A6FF&center=true&vCenter=true&width=950&lines=Artificial+Intelligence;Computer+Vision;Full+Stack+Developer;Backend+Engineer;Linux+Enthusiast;Docker+%7C+Open+Source;Always+Building+Something+New"/>
+
+<br><br>
+
+<a href="https://github.com/tusharcancodehere">
+<img src="https://komarev.com/ghpvc/?username=tusharcancodehere&style=for-the-badge&color=blue"/>
+</a>
+
+<a href="https://github.com/tusharcancodehere?tab=followers">
+<img src="https://img.shields.io/github/followers/tusharcancodehere?style=for-the-badge"/>
+</a>
+
+<a href="https://github.com/tusharcancodehere">
+<img src="https://img.shields.io/github/stars/tusharcancodehere?affiliations=OWNER&style=for-the-badge"/>
+</a>
+
+</div>
+
+---
+
+# 👨‍💻 About Me
+
+```python
+class TusharVerma:
+
+    def __init__(self):
+
+        self.name = "Tushar Verma"
+
+        self.location = "India 🇮🇳"
+
+        self.role = [
+            "AI Developer",
+            "Computer Vision Developer",
+            "MERN Stack Developer",
+            "Backend Developer"
+        ]
+
+        self.currently_learning = [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "Distributed Systems",
+            "Cloud Computing",
+            "DevOps"
+        ]
+
+        self.interests = [
+            "Open Source",
+            "Backend Architecture",
+            "Linux",
+            "Automation",
+            "Computer Vision"
+        ]
+
+        self.goal = "Build software that solves real-world problems."
+
+    def life(self):
+        while True:
+            Build()
+            Break()
+            Learn()
+            Improve()
+```
+
+---
+
+# 🚀 Current Focus
+
+- 🤖 Artificial Intelligence
+- 👁️ Computer Vision
+- 🌐 MERN Stack
+- ⚛️ React Ecosystem
+- ⚙️ Backend Development
+- 🐳 Docker
+- 🐧 Linux
+- 🌍 Open Source
+- ☁️ Cloud Technologies
+
+---
+
+# 🚀 Featured Projects
+
+## 🎥 CAMZ
+
+> Real-time Computer Vision Dashboard with AI-powered processing.
+
+**Tech Stack**
+
+`Python` • `OpenCV` • `Flask` • `React`
+
+---
+
+## 🤖 AI Voice Assistant
+
+Voice Assistant powered by Gemini API with Speech Recognition.
+
+**Tech Stack**
+
+`Python` • `Gemini API` • `Whisper`
+
+---
+
+## 🌐 MERN Full Stack Application
+
+Authentication, REST APIs, Database Integration and Responsive UI.
+
+**Tech Stack**
+
+`MongoDB` • `Express` • `React` • `Node.js`
+
+---
+
+## 🍓 Raspberry Pi Home Server
+
+Personal self-hosted Linux server with Docker containers.
+
+**Tech Stack**
+
+`Docker` • `Linux` • `Raspberry Pi`
+
+---
+
+# 💻 Tech Stack
+
+### Languages
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css,bash"/>
+
+</p>
+
+### Frontend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind"/>
+
+</p>
+
+### Backend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,flask,fastapi"/>
+
+</p>
+
+### AI & Data Science
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=opencv"/>
+
+<img src="https://go-skill-icons.vercel.app/api/icons?i=numpy,pandas"/>
+
+</p>
+
+### Database
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=mongodb,firebase"/>
+
+</p>
+
+### DevOps
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,githubactions,vscode,postman"/>
+
 </p>
 
 ---
 
-<!-- ── 2. PROFILE INTRODUCTION & IDENTITY ────────────────────────────── -->
-<p align="center">
-  <a href="https://github.com/tusharcancodehere">
-    <img
-      src="https://avatars.githubusercontent.com/u/236418225?v=4"
-      width="130"
-      height="130"
-      alt="Tushar avatar"
-      style="border-radius: 50%;"
-    />
-  </a>
-</p>
-
-<h1 align="center">
-  Tushar
-</h1>
+# 📊 GitHub Analytics
 
 <p align="center">
-  <code>@tusharcancodehere</code>
-  &nbsp;·&nbsp;
-  <samp>New Delhi, India</samp>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=tusharcancodehere&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github"/>
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tusharcancodehere&layout=compact&theme=github_dark&hide_border=true&langs_count=8"/>
+
 </p>
 
 <p align="center">
-  <a href="https://github.com/tusharcancodehere">
-    <img src="https://img.shields.io/badge/GitHub-tusharcancodehere-d6a84a?style=flat-square&logo=github&logoColor=e8e0d0&labelColor=17130f&color=6b5433" alt="GitHub"/>
-  </a>
-  &nbsp;
-  <a href="https://tusharcancodehere.github.io/Portfolio_Website/">
-    <img src="https://img.shields.io/badge/Portfolio-Website-d6a84a?style=flat-square&logo=firefox&logoColor=e8e0d0&labelColor=17130f&color=6b5433" alt="Portfolio"/>
-  </a>
+
+<img src="https://streak-stats.demolab.com?user=tusharcancodehere&theme=github-dark&hide_border=true"/>
+
+</p>
+
+---
+# 📈 Contribution Graph
+
+<p align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=tusharcancodehere&theme=github-compact&hide_border=true"/>
+
 </p>
 
 ---
 
-<!-- ── 3. GITHUB STATISTICS (RENAISSANCE PLAQUES) ─────────────────────── -->
+# 🏆 GitHub Trophies
+
 <p align="center">
-  <img
-    src="assets/stats.svg"
-    alt="Tushar's GitHub Statistics — Stars, Repositories, Followers, Combat Energy"
-    width="900"
-  />
+
+<img src="https://github-profile-trophy.vercel.app/?username=tusharcancodehere&theme=algolia&column=4&margin-w=15&margin-h=15"/>
+
 </p>
 
 ---
 
-<!-- ── 4. PROFILE SIGNAL ──────────────────────────────────────────────── -->
+# 📊 GitHub Summary
+
 <p align="center">
-  <img
-    src="assets/profile-signal.svg"
-    alt="Profile Signal — Tushar · @tusharcancodehere · Renaissance Starship Console"
-    width="900"
-  />
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tusharcancodehere&theme=github_dark"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tusharcancodehere&theme=github_dark" height="180"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=tusharcancodehere&theme=github_dark&utcOffset=5.5" height="180"/>
+
 </p>
 
 ---
 
-<!-- ── 5. RENAISSANCE SKIN CARD ──────────────────────────────────────── -->
+# 📌 Featured Repositories
+
 <p align="center">
-  <img
-    src="assets/skin-card.svg"
-    alt="Renaissance skin template card — GitSkins"
-    width="900"
-  />
+
+<a href="https://github.com/tusharcancodehere/CAMZ">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=CAMZ&theme=github_dark&hide_border=true"/>
+
+</a>
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=AI-Voice-Assistant&theme=github_dark&hide_border=true"/>
+
+</a>
+
+</p>
+
+<p align="center">
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=MERN-FullStack&theme=github_dark&hide_border=true"/>
+
+</a>
+
+<a href="https://github.com/tusharcancodehere">
+
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=tusharcancodehere&repo=RaspberryPi-HomeServer&theme=github_dark&hide_border=true"/>
+
+</a>
+
 </p>
 
 ---
 
-<!-- ── 6. LANGUAGE STACK ──────────────────────────────────────────────── -->
+# 🏅 Achievements
+
+- 🤖 AI Application Development
+- 👁️ Computer Vision Systems
+- 🌐 MERN Stack Development
+- ⚙️ Backend Engineering
+- 🐳 Docker & Linux
+- 🌍 Open Source Contributions
+- 🚀 Continuous Learning
+- 💻 Building Real-World Projects
+
+---
+
+# 📚 Currently Learning
+
+```text
+████████████████████░░░░ 80%
+
+✓ Artificial Intelligence
+
+✓ Computer Vision
+
+✓ MERN Stack
+
+✓ Backend Development
+
+✓ Docker
+
+✓ Linux
+
+◉ Distributed Systems
+
+◉ DevOps
+
+◉ Cloud Computing
+```
+
+---
+
+# ⚡ Developer Mindset
+
+```text
+while(alive){
+
+    Learn();
+
+    Build();
+
+    Fail();
+
+    Improve();
+
+    Repeat();
+
+}
+```
+
+---
+
+# 💬 Random Dev Quote
+
 <p align="center">
-  <img
-    src="assets/language-stack.svg"
-    alt="Language & Tech Telemetry — Python, OpenCV, Flask, OpenAI, Raspberry Pi"
-    width="900"
-  />
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=github_dark"/>
+
+</p>
+
+---
+# 🌐 Connect With Me
+
+<p align="center">
+
+<a href="https://github.com/tusharcancodehere" target="_blank">
+<img src="https://skillicons.dev/icons?i=github" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://linkedin.com/in/tusharverma-" target="_blank">
+<img src="https://skillicons.dev/icons?i=linkedin" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://instagram.com/someone_was__here_" target="_blank">
+<img src="https://skillicons.dev/icons?i=instagram" height="55" />
+</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="mailto:thetusharverma2505@gmail.com">
+<img src="https://skillicons.dev/icons?i=gmail" height="55" />
+</a>
+
 </p>
 
 ---
 
-<!-- ── 7. CONTRIBUTION SIGNAL (ANIMATED SPACE-SHOOTER COMBAT SCENE) ───── -->
-<p align="center">
-  <img
-    src="assets/starship-activity.gif"
-    alt="Animated starship battle representing GitHub contribution activity"
-    width="900"
-  />
-</p>
+# 🎯 2026 Goals
 
-<p align="center">
-  <samp>223 contributions over the last year converted into starship combat energy.</samp>
-</p>
-
-<details>
-<summary><samp>◈ Static Contribution Matrix Fallback</samp></summary>
-
-<br/>
-
-<p align="center">
-  <img
-    src="assets/contribution-signal.svg"
-    alt="Contribution Signal — Static Matrix Fallback"
-    width="900"
-  />
-</p>
-
-</details>
+- 🚀 Build Production Ready AI Applications
+- 🤖 Master Computer Vision
+- 🌐 Become an Advanced MERN Developer
+- ⚙️ Learn Scalable Backend Architecture
+- 🐳 Master Docker & Containers
+- ☁️ Learn Cloud Deployment
+- 🌍 Contribute More to Open Source
+- 📚 Read More Engineering Books
 
 ---
 
-<!-- ── 8. FEATURED PROJECTS ───────────────────────────────────────────── -->
-<p align="center">
-  <img
-    src="assets/projects.svg"
-    alt="Project Dossiers — CCTV_PI, Jarvis, CamZ"
-    width="900"
-  />
-</p>
+# ⚙️ Tech I Enjoy Working With
 
-<!-- Clickable repository mission links -->
 <p align="center">
-  <a href="https://github.com/tusharcancodehere/CCTV_PI">
-    <img src="https://img.shields.io/badge/Mission-CCTV__PI-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CCTV_PI"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/tusharcancodehere/Jarvis">
-    <img src="https://img.shields.io/badge/Mission-Jarvis-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="Jarvis"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/tusharcancodehere/CamZ">
-    <img src="https://img.shields.io/badge/Mission-CamZ-d6a84a?style=for-the-badge&logo=github&logoColor=e8e0d0&labelColor=17130f" alt="CamZ"/>
-  </a>
+
+<img src="https://skillicons.dev/icons?i=python"/>
+
+<img src="https://skillicons.dev/icons?i=react"/>
+
+<img src="https://skillicons.dev/icons?i=nodejs"/>
+
+<img src="https://skillicons.dev/icons?i=express"/>
+
+<img src="https://skillicons.dev/icons?i=mongodb"/>
+
+<img src="https://skillicons.dev/icons?i=docker"/>
+
+<img src="https://skillicons.dev/icons?i=linux"/>
+
+<img src="https://skillicons.dev/icons?i=git"/>
+
+<img src="https://skillicons.dev/icons?i=github"/>
+
+<img src="https://skillicons.dev/icons?i=vscode"/>
+
 </p>
 
 ---
 
-<!-- ── 9. CONNECT ─────────────────────────────────────────────────────── -->
-<p align="center">
-  <samp>⌘ &nbsp; Connect</samp>
-</p>
+# 💡 Philosophy
 
-<p align="center">
-  <a href="https://github.com/tusharcancodehere">
-    <img src="https://img.shields.io/badge/-GitHub-17130f?style=for-the-badge&logo=github&logoColor=d6a84a&labelColor=211b15" alt="GitHub"/>
-  </a>
-  &nbsp;
-  <a href="https://tusharcancodehere.github.io/Portfolio_Website/">
-    <img src="https://img.shields.io/badge/-Portfolio-17130f?style=for-the-badge&logo=firefox-browser&logoColor=d6a84a&labelColor=211b15" alt="Portfolio"/>
-  </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/tusharverma-/">
-    <img src="https://img.shields.io/badge/-LinkedIn-17130f?style=for-the-badge&logo=linkedin&logoColor=d6a84a&labelColor=211b15" alt="LinkedIn"/>
-  </a>
-</p>
+> **"Build things that solve real problems."**
 
-<!-- ── 10. FOOTER ─────────────────────────────────────────────────────── -->
-<p align="center">
-  <img
-    src="assets/footer.svg"
-    alt="Mission Complete · live public GitHub telemetry"
-    width="900"
-  />
-</p>
+I enjoy transforming ideas into software, learning from every project, and continuously improving my engineering skills.
+
+---
+
+<div align="center">
+
+## ⚡ Thanks for Visiting!
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&pause=1000&center=true&vCenter=true&width=650&lines=Thanks+for+visiting!;Happy+Coding!;See+you+again!;⭐+Don't+forget+to+star+my+repositories!"/>
+
+<br><br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=180&color=gradient&customColorList=12,20,24,30"/>
+
+</div>
